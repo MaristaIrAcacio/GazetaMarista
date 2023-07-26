@@ -1,0 +1,13 @@
+.imageNew {
+    width: 5rem;
+    height: 5rem;
+}
+.imageNewMain {
+    width: 15rem;
+}
+.backArrow > a {
+    text-decoration: none;
+}
+.backArrow > a > i {
+    font-size: 3rem;
+}

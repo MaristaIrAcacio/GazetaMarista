@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <title>GazetaAcácio - Home</title>
+
+    <!-- | Require_Meta_Tags | -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- | Import Bootstrap (CDN) | -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <!-- | Import Jquery (CDN) | -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- | Style_Sheets | -->
+    <link rel="stylesheet" href="./components/css/fonts.css">
+    <link rel="stylesheet" href="./components/css/app.css">
+
+    <!-- | -- Import Sweetalert2 -- | -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- | -- Import / Exports files Javascript Modules -- | -->
+
+
+    <!-- | -- Import Javascripts -- | -->
+    <script src="./components/public/generate.js" defer></script>
+    <script src="./components/public/controlls.js" defer></script>
+
+    <style>
+      .inputFontColor::placeholder { color: #fefefe79 }
+    </style>
+
+</head>
+<body>
+    <!-- | Views | -->
+    <header>
+        <nav class="navbar colorBlueMarista navbar-dark bg-dark"> <!-- Caso prefira fixada add "fixed-top" nas classes--> 
+        <div class="container-fluid px-5">
+          <div class="navbar-brand logoMarista">
+              <img src="./components/images/jornal-marista.svg" class="imgLogoPage">
+          </div>
+          <div class="containerButtonsHeader">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <button id="btnSettings" type="button" class="btnSettings">
+              <i class="bi bi-gear-fill"></i>
+            </button>
+          </div>
+          <div class="offcanvas offcanvas-end text-bg-dark colorBlueMarista" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h2 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Categorias</h2>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link fs-5" aria-current="page" href="">
+                    <i class="bi bi-activity"></i>
+                    Saúde
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-5" href="#">
+                    <i class="bi bi-controller"></i>
+                    Entretenimento
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-5" href="#">
+                    <i class="bi bi-scooter"></i>
+                    Esportes
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-5" href="#">
+                    <i class="bi bi-calendar-heart"></i>
+                    Vida
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-5" href="#">
+                    <i class="bi bi-people"></i>
+                    Política
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-5" href="#">
+                    <i class="bi bi-person-hearts"></i>
+                    Bem-estar
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-5" href="#">
+                    <i class="bi bi-bookmark-check"></i>
+                    Recomendados
+                </i></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class='bx bxs-filter-alt' ></i>
+                      Autores
+                    </a>
+                    <ul id="containerAuthors" class="dropdown-menu dropdown-menu-dark">
+                    </ul>
+                  </li>
+                </ul>
+                <div class="d-flex" role="search">
+                  <input class="form-control inputFontColor me-2 bg-dark text-bg-dark" id="searchAuthor" type="search" placeholder="Procure por autores" aria-label="Search">
+                  <button id="searchAuthorBtn" class="btn btn-light" type="button">Procurar</button>
+                </div>
+                <br>
+                <div class="resAuthors"></div>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <section id="containerSettings" class="containerSettings hidden">
+      <header class="headerContainerSettings">
+        <i id="closeBtnSettings" class="bi bi-x-lg"></i>
+      </header>
+      <main class="containerMainSettings">
+        <div class="containerTheme">
+          <h1 class="titleSettings">Tema :</h1>
+          <label class="switch">
+            <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
+            <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>   
+            <input type="checkbox" id="inputCheckbox_theme" class="input">
+            <span class="slider"></span>
+          </label>
+        </main>
+        </div>
+    </section>
+
+    <!-- -|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-| -->
+
+    <!-- View_News -->
+
+    <main class="containerMain">
+        <header class="headerContainermain">
+            <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <i class="bi bi-question-circle"></i>
+                About
+            </button>
+        </header>
+        <hr>
+        <main class="mainContainerPage">
+            <div id="urgentNews" class="firstRow"></div>
+            <div id="sideNews" class="twoRow"></div>
+            <div id="recommendedNews" class="thereRow"></div><hr>
+            <div id="cardsNews" class="fourRow containerCardsNews d-flex justify-content-around my-3"></div><hr>
+            <div id="quoteAndrecent" class="fiveRow d-flex justify-content-around my-4"></div>
+        </main>
+    </main>
+
+    <div class="offcanvas offcanvas-start colorBlue2-Marista" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header cardDark-min">
+            <h5 class="offcanvas-title cardDark-text" id="offcanvasScrollingLabel">
+                About
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+        <div class="offcanvas-body bg-dark text-light containerOffCanvas colorBlueMarista ">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                <div class="accordion-item cardDark">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button cardDark-min cardDark-text" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                      Quem somos nós?
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body aboutbg cardDark-text">
+                      Somos uma equipe dedicada de alunos e professores comprometidos em trazer notícias relevantes e envolventes para a comunidade escolar. Nosso jornal é uma plataforma criada para informar, inspirar e conectar os membros da nossa escola.
+                    </div>
+                  </div>
+                </div>
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                <div class="accordion-item cardDark">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button cardDark-min cardDark-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                      Qual nosso objetivos?
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body aboutbg cardDark-text">
+                      Bem-vindo ao nosso jornal! Nosso objetivo é trazer notícias relevantes, precisas e inspiradoras para a comunidade escolar. Acreditamos que informação é poder e que uma comunidade bem informada é essencial para o crescimento e o desenvolvimento de todos.
+                    </div>
+                  </div>
+                </div>
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                <div class="accordion-item cardDark">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button cardDark-min cardDark-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                      Aqui slah, você acha alguma coisa para por!
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body aboutbg cardDark-text">
+                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body aboutbg cardDark-text</code>, though the transition does limit overflow.
+                    </div>
+                  </div>
+                </div>
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                <div class="accordion-item cardDark">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button cardDark-min cardDark-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                        Qual nosso objetivos?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                      <div class="accordion-body aboutbg cardDark-text">
+                        Aqui poderiamos por os objetivos do jornal Marista, uma palavrinha com a Carla do pq ela pensou em fazer o Jornal!
+                      </div>
+                    </div>
+                  </div>
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                  <div class="accordion-item cardDark">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button cardDark-min cardDark-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                        Aqui slah, você acha alguma coisa para por!
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                      <div class="accordion-body aboutbg cardDark-text">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body aboutbg cardDark-text</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                  <div class="accordion-item cardDark">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button cardDark-min cardDark-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                        Qual nosso objetivos?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                      <div class="accordion-body aboutbg cardDark-text">
+                        Aqui poderiamos por os objetivos do jornal Marista, uma palavrinha com a Carla do pq ela pensou em fazer o Jornal!
+                      </div>
+                    </div>
+                  </div>
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                  <div class="accordion-item cardDark">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button cardDark-min cardDark-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+                        Aqui slah, você acha alguma coisa para por!
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
+                      <div class="accordion-body aboutbg cardDark-text">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body aboutbg cardDark-text</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                  <div class="accordion-item cardDark">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button cardDark-min cardDark-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
+                        Qual nosso objetivos?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse">
+                      <div class="accordion-body aboutbg cardDark-text">
+                        Aqui poderiamos por os objetivos do jornal Marista, uma palavrinha com a Carla do pq ela pensou em fazer o Jornal!
+                      </div>
+                    </div>
+                  </div>
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                  <div class="accordion-item cardDark">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button cardDark-min cardDark-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false" aria-controls="panelsStayOpen-collapseNine">
+                        Aqui slah, você acha alguma coisa para por!
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse">
+                      <div class="accordion-body aboutbg cardDark-text">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body aboutbg cardDark-text</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+        </div>
+
+    <!-- -|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-| -->
+
+    <footer class="containerFooter">
+        <div>
+            <img src="./components/images/marista-branco.png" height="64px">
+        </div>
+        <div>
+            <nav>
+                <a href="#">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="bi bi-facebook"></i>
+                </a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
