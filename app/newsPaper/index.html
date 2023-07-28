@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>GazetaAcácio - NewsPaper</title>
+    <title>Gazeta Marista Ir. Acácio</title>
 
     <!-- | Require_Meta_Tags | -->
     <meta charset="UTF-8">
@@ -151,6 +151,7 @@
                     };
                     if (newsFound == true) {
                         renderNews(dataNew);
+                        document.title = dataNew.title + " - Gazeta Marista Ir. Acácio";
                     } else {
                         window.location.href = '../';
                     };

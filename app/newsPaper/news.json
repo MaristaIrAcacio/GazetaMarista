@@ -2,34 +2,31 @@
     "news": [
         {
             "id" : 1,
-            "title" : "Teste de titulo 1!",
+            "title" : "PRIMEIRO STARTUP WEEKEND SOCIAL DA AMÉRICA LATINA ACONTECE NA ESCOLA SOCIAL MARISTA IRMÃO ACÁCIO",
             "author" : "001",
-            "date" : "2023-07-22",
-            
-            "lead" : "Teste de lead!",
-            "bodyNew" : "Teste de corpo na noticia",
-            "imgMain" : "123.jpg",
-            "imgs2" : ["123.jpg","456.jpg"],
-            "category" : "Esportes"
+            "date" : "2023-06-22",
+            "lead" : "",
+            "bodyNew" : "Uma Startup por definição \"é um grupo de pessoas à procura de um modelo de negócios repetível e escalável, trabalhando em condições de extrema incerteza.\".\nE no final do mês de abril nos dias 28, 29 e 30 tive o privilégio de estar na primeira Startup Weekend Social da América Latina,que aconteceu nas dependências da nossa Escola Social. Me atrevo a dizer que nunca vi dois \"mundos\" se colidirem em tanta harmonia. No mesmo ambiente onde se encontram jovens com dores causadas pelo próprio sistema econômico atual, era lançado o desafio de resolver essas problemáticas utilizando as próprias dores. Particularmente, digo que não sou exatamente a favor do capitalismo, porém, tendo em vista a possibilidade de usar o sistema para fazê-lo enxergar seus próprios erros e comprar ideias para resolvê-los fiz-me desafiada.\nO Startup ofereceu um outro ponto de vista, comunicando as dores através de quem realmente as sentem, dando credibilidade a todas as cenas. Apesar da relutância em monetizar e lucrar em troca de uma resolução das temáticas sociais, aprendemos a avaliar os problemas de forma crítica, o que pode ser usado em diversos aspectos do nosso cotidiano.\nNão como obrigação, mas vou aproveitar a oportunidade e dizer que valeu a pena a experiência!",
+            "imgMain" : "",
+            "imgs2" : [""],
+            "category" : "Notícias"
         },
         {
             "id" : 2,
-            "title" : "Teste de titulo 2!",
+            "title" : "Visita na Tarobá movimenta a escola",
             "author" : "002",
-            "date" : "2023-07-22",
-            
-            "lead" : "Teste de lead!",
-            "bodyNew" : "Teste de corpo na noticia",
-            "imgMain" : "123.jpg",
-            "imgs2" : ["456.jpg","123.jpg"],
-            "category" : "Esportes"
+            "date" : "2023-06-22",
+            "lead" : "",
+            "bodyNew" : "A Visita na Tarobá movimentou a Escola Social Marista Irmão Acácio nos dias 10,17 e 24 de março de 2023. Esse movimento aconteceu com os alunos do primeiro ano do Ensino Médio que estão envolvidos no projeto do Jornal Escolar.<br>Os alunos puderam visitar os estúdios e a rádio, além de outras dependências, os estudantes também participaram do programa Vitrine Revista ao vivo apresentado pela lindíssima Maika Martins, todos puderam tirar fotos com alguns apresentadores como o Cid Ribeiro. No final do passeio ainda foram privilegiados com um lanche saboroso oferecido pela empresa de comunicação.",
+            "imgMain" : "",
+            "imgs2" : [""],
+            "category" : "Notícias"
         },
         {
             "id" : 3,
             "title" : "Teste de titulo! 3",
             "author" : "003",
             "date" : "2023-07-22",
-            
             "lead" : "Teste de lead!",
             "bodyNew" : "Teste de corpo na noticia",
             "imgMain" : "123.jpg",
@@ -41,7 +38,6 @@
             "title" : "Teste de titulo 4!",
             "author" : "004",
             "date" : "2023-07-22",
-            
             "lead" : "Teste de lead!",
             "bodyNew" : "Teste de corpo na noticia",
             "imgMain" : "123.jpg",
@@ -53,7 +49,6 @@
             "title" : "Teste de titulo 5!",
             "author" : "005",
             "date" : "2023-07-22",
-            
             "lead" : "Teste de lead!",
             "bodyNew" : "Teste de corpo na noticia",
             "imgMain" : "123.jpg",
@@ -65,7 +60,6 @@
             "title" : "Teste de titulo! 6",
             "author" : "006",
             "date" : "2023-07-22",
-            
             "lead" : "Teste de lead!",
             "bodyNew" : "Teste de corpo na noticia",
             "imgMain" : "123.jpg",
@@ -77,7 +71,6 @@
             "title" : "Teste de titulo 7!",
             "author" : "007",
             "date" : "2023-07-22",
-            
             "lead" : "Teste de lead!",
             "bodyNew" : "Teste de corpo na noticia",
             "imgMain" : "123.jpg",
@@ -89,7 +82,6 @@
             "title" : "Teste de titulo 8!",
             "author" : "008",
             "date" : "2023-07-22",
-            
             "lead" : "Teste de lead!",
             "bodyNew" : "Teste de corpo na noticia",
             "imgMain" : "123.jpg",
@@ -101,7 +93,6 @@
             "title" : "Teste de titulo! 9",
             "author" : "001",
             "date" : "2023-07-22",
-            
             "lead" : "Teste de lead!",
             "bodyNew" : "Teste de corpo na noticia",
             "imgMain" : "123.jpg",
