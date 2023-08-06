@@ -33,18 +33,18 @@ $('#searchAuthorBtn').click(() => {
         }
     });
 
-    authors.forEach(element => {
-        if (author[0][0].toLowerCase() === element[0][0].toLowerCase()) {
-            let codeAuthorFind = element[1];
-            authorsFind.forEach(codeAuthor => {
-                if (codeAuthor !== codeAuthorFind) {
-                    numTrue = true;
-                    document.querySelector('.resAuthors').innerHTML += `<a href="#" class="resText">${codeAuthor[0]}</a>`;
-                    console.log(authorsFind)
-                };
-            });
-        }
-    });
+    // authors.forEach(element => {
+    //     if (author[0][0].toLowerCase() === element[0][0].toLowerCase()) {
+    //         let codeAuthorFind = element[1];
+    //         authorsFind.forEach(codeAuthor => {
+    //             if (codeAuthor !== codeAuthorFind) {
+    //                 numTrue = true;
+    //                 document.querySelector('.resAuthors').innerHTML += `<a href="#" class="resText">${codeAuthor[0]}</a>`;
+    //                 console.log(authorsFind)
+    //             };
+    //         });
+    //     }
+    // });
 
     if (!numTrue) {
         document.querySelector('.resAuthors').innerHTML = "";
