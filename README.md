@@ -8,8 +8,8 @@ Texto mais explicativo sobre o projeto
 
 ## A Equipe
 
-<img width="30%" src="app\components\images\nathan-fabricio_ocupacao.png" />
-<img width="30%" src="app\components\images\vitor-gabriel_programador.png" />
+<img width="60%" src="app\components\images\nathan-fabricio_ocupacao.png" />
+<img width="60%" src="app\components\images\vitor-gabriel_programador.png" />
 <img width="60%" src="app\components\images\vitor-oliveira_programador.png" />
 <img width="60%" src="app\components\images\julia-almeida_escritora.png" />
 <img width="60%" src="app\components\images\julia-almeida_escritora-supervisora.png" />
