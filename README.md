@@ -1,4 +1,4 @@
-<img src="app\components\images\gazeta-marista_radio-conexao_azul_fundo_120.png" align="center" />
+<img src="components\images\gazeta-marista_radio-conexao_azul_fundo_120.png" align="center" />
 <h1 align="center">Gazeta Marista Irmão Acácio</h1>
 <p align="center">Um projeto desenvolvido pela disciplina de Língua Portuguesa sob orientação da professora Carla Ravaneda, em parceria com o projeto Educomunicação orientado por Aline Querino.</p>
 
@@ -8,16 +8,12 @@ Texto mais explicativo sobre o projeto
 
 ## A Equipe
 
-<img width="30%" src="app\components\images\nathan-fabricio_ocupacao.png" />
-<img width="30%" src="app\components\images\vitor-gabriel_programador.png" />
-<img width="60%" src="app\components\images\vitor-oliveira_programador.png" />
-<img width="60%" src="app\components\images\julia-almeida_escritora.png" />
-<img width="60%" src="app\components\images\julia-almeida_escritora-supervisora.png" />
+<img width="49%" src="components\images\carla-ravaneda_editora-chefe.png" />
+<img width="49%" src="components\images\aline-querino_mentora.png" />
+<img width="49%" src="components\images\nathan-fabricio_ocupacao.png" />
+<img width="49%" src="components\images\vitor-gabriel_programador.png" />
 
-* Aline Querino
-* Escritores (escrever individualmente)
-* Nathan Fabricio
-* Vitor Gabriel
+* Adicionar os outros
 
 ## Próximos Passos
 
@@ -26,8 +22,8 @@ Texto mais explicativo sobre o projeto
 * Aprimorar a interface e experiência do usuário.
 
 <p align="center">
-<img width="75%" src="app\components\images\marista_azul-fundo.png" />
+    <img width="70%" src="components\images\marista_azul-fundo.png" />
 </p>
 <p align="center">
-<img width="25%" src="app\components\images\insta-face-linkedin.png" />
+    <img width="20%" src="components\images\insta-face-linkedin.png" />
 </p>

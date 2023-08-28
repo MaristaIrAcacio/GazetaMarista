@@ -153,19 +153,13 @@ generateAuthors();
 
 
 document.querySelector('#urgentNews').innerHTML = (`
-    <div class="card mb-3 p-1 m-2 cardDark" style="max-width: 90%;">
+    <div class="card mb-3 p-1 m-2 cardDark" style="width: 70%; height: 500px; background-image: url(./components/images/newspaperImages/${info_urgentNews.diretoryImage}); background-position: center;  background-repeat: no-repeat; background-size: cover>
         <div class="row g-0">
-            <div class="col-md-4">
-                <img src="./components/images/newspaperImages/${info_urgentNews.diretoryImage}" class="img-fluid rounded-start" alt="Imagem">
-            </div>
-            <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title cardDark-text">${info_urgentNews.title}</h5>
                     <p class="card-text cardDark-text">${info_urgentNews.description}</p>
                     <p class="card-text cardDark-text cardDark-text"><small class="text-body-secondary cardDark-text">${calcDate(info_urgentNews.datePublic)} dias atrás!</small></p>
-                    <a href="newsPaper/?idNews=1" class="btn btn-primary">Visualizar notícia</a>
                 </div>
-            </div>
         </div>
     </div>
 `);

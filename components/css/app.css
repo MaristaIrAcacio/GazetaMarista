@@ -1,7 +1,7 @@
 :root {
     --blue: #3777BC;
     --blue-dark: #173963;
-    --cyan: #5fc8d7;
+    --cyan: #5FC8D7;
     --green: #36BBA5;
     --red: #F15B4E;
     --yellow: #FDB933;
@@ -9,7 +9,6 @@
     --theme-dark-background: #17191a;
     --theme-dark-background-card: #2c2d2e;
     --theme-dark-text: #fefefe;
-    --font-default: 'Poppins', sans-serif;
 }
 
 body, html {
@@ -17,9 +16,6 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-}
-* {
-    font-family: var(--font-default);
 }
 
 /* body,html {background: var(--theme-dark-background);}.cardDark { background: var(--theme-dark-background-card); border: 1px solid #fefefe; } .cardDark-text {color: var(--theme-dark-text) !important; } */
@@ -39,6 +35,7 @@ body, html {
 .imgLogoPage {
     width: 20rem;
 }
+
 .navBar-header {
     display: flex;
     gap: 1rem;
@@ -207,7 +204,6 @@ body::-webkit-scrollbar-thumb {
 
 .firstRow {
     width: 100%;
-    background: rgba(17, 17, 17, 0.082);
     display: flex;
     justify-content: center;
 }
