@@ -2,8 +2,7 @@
 
 /*
     Para inserir novos autores, basta inserir seu nome no índice > 0 < 
-    Importante - Tudo minusculo
-*/
+// */
 
 const authors = [
     { 0 : 'vitor', 1 : '001'},
@@ -32,19 +31,6 @@ $('#searchAuthorBtn').click(() => {
             authorsFind.push(element[1]);
         }
     });
-
-    // authors.forEach(element => {
-    //     if (author[0][0].toLowerCase() === element[0][0].toLowerCase()) {
-    //         let codeAuthorFind = element[1];
-    //         authorsFind.forEach(codeAuthor => {
-    //             if (codeAuthor !== codeAuthorFind) {
-    //                 numTrue = true;
-    //                 document.querySelector('.resAuthors').innerHTML += `<a href="#" class="resText">${codeAuthor[0]}</a>`;
-    //                 console.log(authorsFind)
-    //             };
-    //         });
-    //     }
-    // });
 
     if (!numTrue) {
         document.querySelector('.resAuthors').innerHTML = "";
@@ -163,7 +149,7 @@ document.querySelector('#urgentNews').innerHTML = (`
                     <h5 class="card-title cardDark-text">${info_urgentNews.title}</h5>
                     <p class="card-text cardDark-text">${info_urgentNews.description}</p>
                     <p class="card-text cardDark-text cardDark-text"><small class="text-body-secondary cardDark-text">${calcDate(info_urgentNews.datePublic)} dias atrás!</small></p>
-                    <a href="newsPaper/?idNews=1" class="btn btn-primary">Visualizar notícia</a>
+                    <a href="newsPaper/news1.html" class="btn btn-primary">Visualizar notícia</a>
                 </div>
             </div>
         </div>
