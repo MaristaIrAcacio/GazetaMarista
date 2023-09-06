@@ -9,8 +9,15 @@ body {
     display: flex;
     align-items: center;
     font-weight: 900;
+    text-decoration: none;
+    color: #616161;
+    transition: .33s;
+    border-radius: 3px;
 }
 
+.btn-back:hover {
+    background: rgba(27, 26, 26, 0.123);
+}
 .btn-back > i {
     font-size: 2rem;
 }
@@ -33,9 +40,14 @@ body {
 }
 
 .article p {
-    font-size: 16px;
+    font-size: 1.4rem;
+    font-weight: 500;
     line-height: 1.5;
     color: #666;
+}
+
+.article p::first-letter {
+    font-weight: 600;
 }
 
 .article img {
@@ -45,8 +57,23 @@ body {
 }
 
 footer {
-    background-color: #333;
+    background-color: #173963;
     color: #fff;
     text-align: center;
     padding: 10px;
+}
+
+.date {
+    color: #222222 !important;
+    font-size: 1.3rem !important;
+}
+
+.lide {
+    font-family: serif !important;
+    font-size: 1.5rem !important;
+}
+
+.title {
+    font-weight: 700;
+    font-family: sans-serif;
 }
