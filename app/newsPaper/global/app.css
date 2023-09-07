@@ -83,3 +83,22 @@ footer {
         font-size: 1.2rem !important;
     }
 }
+
+.highlighted {
+    background-color: rgb(248, 248, 24);
+    cursor: pointer;
+}
+
+#popup {
+    z-index: 99;
+    position: absolute;
+    background: rgb(241, 241, 241);
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: .3rem;
+    display: none;
+}
+
+#popup-content {
+    font-family: sans-serif;
+}
