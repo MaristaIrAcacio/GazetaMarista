@@ -18,7 +18,7 @@ body, html {
     overflow-x: hidden;
 }
 
-/* body,html {background: var(--theme-dark-background);}.cardDark { background: var(--theme-dark-background-card); border: 1px solid #fefefe; } .cardDark-text {color: var(--theme-dark-text) !important; } */
+/* body,html { background: var(--theme-dark-background); } .cardDark { background: var(--theme-dark-background-card); border: 1px solid #fefefe; } .cardDark-text { color: var(--theme-dark-text) !important; } */
 
 .containerHeader {
     background: var(--blue-dark);
@@ -40,6 +40,7 @@ body, html {
     display: flex;
     gap: 1rem;
 }
+
 .containerFooter {
     background: var(--blue-dark);
     position: absolute;
@@ -49,11 +50,13 @@ body, html {
     display: grid;
     text-align: center;
 }
+
 .containerFooter > div:nth-child(2) {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
 }
+
 .containerFooter > div:nth-child(2) > nav > a > i {
     color: #f5f5f5;
     font-size: 2.3rem;
@@ -61,6 +64,7 @@ body, html {
     cursor: pointer;
     transition: .33s;
 }
+
 .btnMenu > i {
     color: #fefefe;
     font-size: 2rem;
@@ -70,10 +74,12 @@ body, html {
     transition: .33s;
     cursor: pointer;
 }
+
 .btnMenu > i:hover {
     background: #fefefe;
     color: #6c6c6c;
 }
+
 .menuMobileNav {
     position: absolute;
     width: 100%;
@@ -83,6 +89,7 @@ body, html {
     display: grid;
     place-content: center;
 }
+
 .navBar-header-responsive {
     display: grid;
 }
@@ -94,28 +101,34 @@ body, html {
     display: flex;
     gap: 1rem;
 }
+
 .navBar-header-responsive > a:hover {
     text-decoration: underline;
 }
+
 .navBar-header-responsive > a:hover >  i {
     background: #fefefe2d;
     padding: .5rem;
     border-radius: 5px;
     transition: .33s;
-} 
+}
+
 .navBar-header-responsive > a > i {
     color: #fefefe;
     padding: .5rem;
     border-radius: 5px;
     font-size: 2rem;
 }
+
 .menuMobileNav {
     transition: .33s;
 }
+
 .hidden {
     margin-left: 100%;
     display: none;
 }
+
 .menuMobileNav > i {
     color: #fefefe;
     font-size: 3rem;
@@ -125,10 +138,12 @@ body, html {
     transition: .33s;
     cursor: pointer;
 }
+
 .menuMobileNav > i:hover {
     background: #fefefe;
     color: #343333;
 }
+
 @media screen and (max-width : 450px) {
     .containerHeader > img {
         display: none;
@@ -162,6 +177,7 @@ body::-webkit-scrollbar-thumb {
     width: 15%;
     background: rgb(241, 240, 240);
 }
+
 .embedList {
     height: 100%;
 }
@@ -221,6 +237,7 @@ body::-webkit-scrollbar-thumb {
     .containerCardsNews {
         grid-template-columns: 1fr !important;
     }
+
     .cardResponsive {
         width: 90% !important;
     }
@@ -278,15 +295,15 @@ body::-webkit-scrollbar-thumb {
     display: inline-block;
     width: 64px;
     height: 34px;
-  }
-  
-  .switch input {
+}
+
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -296,9 +313,9 @@ body::-webkit-scrollbar-thumb {
     background-color: #73C0FC;
     transition: .4s;
     border-radius: 30px;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 30px;
@@ -309,18 +326,18 @@ body::-webkit-scrollbar-thumb {
     z-index: 2;
     background-color: #e8e8e8;
     transition: .4s;
-  }
-  
-  .sun svg {
+}
+
+.sun svg {
     position: absolute;
     top: 6px;
     left: 36px;
     z-index: 1;
     width: 24px;
     height: 24px;
-  }
-  
-  .moon svg {
+}
+
+.moon svg {
     fill: #73C0FC;
     position: absolute;
     top: 5px;
@@ -328,57 +345,55 @@ body::-webkit-scrollbar-thumb {
     z-index: 1;
     width: 24px;
     height: 24px;
-  }
-  
-  /* .switch:hover */.sun svg {
+}
+
+.switch:hover .sun svg {
     animation: rotate 15s linear infinite;
-  }
-  
-  @keyframes rotate {
-   
+}
+
+@keyframes rotate {
     0% {
-      transform: rotate(0);
+        transform: rotate(0);
     }
-  
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  /* .switch:hover */.moon svg {
+}
+
+.switch:hover .moon svg {
     animation: tilt 5s linear infinite;
-  }
-  
-  @keyframes tilt {
-   
+}
+
+@keyframes tilt {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-  
+
     25% {
-      transform: rotate(-10deg);
+        transform: rotate(-10deg);
     }
-  
+
     75% {
-      transform: rotate(10deg);
+        transform: rotate(10deg);
     }
-  
+
     100% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-  }
-  
-  .input:checked + .slider {
+}
+
+.input:checked + .slider {
     background-color: #183153;
-  }
-  
-  .input:focus + .slider {
+}
+
+.input:focus + .slider {
     box-shadow: 0 0 1px #183153;
-  }
-  
-  .input:checked + .slider:before {
+}
+
+.input:checked + .slider:before {
     transform: translateX(30px);
-  }
+}
 
 .containerMainSettings {
     padding: 1rem;
@@ -398,17 +413,21 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
     padding: .3rem 1rem;
 }
+
 .accordion-button::after {
     color: #f5f5f5 !important;
 }
+
 .resAuthors {
     background: rgba(32, 32, 32, 0.308);
     padding: .3rem .3rem;
     border-radius: 5px;
 }
+
 .titleElement {
     font-size: 1.3rem;
 }
+
 .resText {
     color: #f5f5f5;
     background: rgba(32, 32, 32, 0.432);

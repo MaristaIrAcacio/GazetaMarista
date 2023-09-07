@@ -12,6 +12,11 @@ Texto mais explicativo sobre o projeto
 <img width="49%" src="components\images\aline-querino_mentora.png" />
 <img width="49%" src="components\images\nathan-fabricio_ocupacao.png" />
 <img width="49%" src="components\images\vitor-gabriel_programador.png" />
+<img width="49%" src="components\images\julia-almeida_redatora-supervisora.png" />
+<img width="49%" src="components\images\juan-luna-fernandes_redator-a.png" />
+<img width="49%" src="components\images\murilo-tonassi_redator.png" />
+<img width="49%" src="components\images\nicolas-tonassi_redator.png" />
+<img width="49%" src="components\images\vitoria-gabrieli_redatora.png" />
 
 * Adicionar os outros
 
@@ -22,8 +27,18 @@ Texto mais explicativo sobre o projeto
 * Aprimorar a interface e experiência do usuário.
 
 <p align="center">
-    <img width="70%" src="components\images\marista_azul-fundo.png" />
+  <a href="https://maristaescolassociais.org.br/escola/marista-escola-social-ir-acacio/">
+    <img width="64%" src="components\images\marista_azul-fundo.png" />
+  </a>
 </p>
 <p align="center">
-    <img width="20%" src="components\images\insta-face-linkedin.png" />
+  <a href="https://www.instagram.com/maristairacacio/">
+    <img height="64px" src="components\images\insta.png" />
+  </a>
+  <a href="https://www.facebook.com/maristairacacio">
+    <img height="64px" src="components\images\face.png" />
+  </a>
+  <a href="https://www.linkedin.com/company/marista-ir-acácio/">
+    <img height="64px" src="components\images\linkedin.png" />
+  </a>
 </p>
