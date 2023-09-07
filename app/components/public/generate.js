@@ -41,10 +41,10 @@ $('#searchAuthorBtn').click(() => {
 //  ------------------------------------------ | Geração_de_notícia_em_destaque | ------------------------------------------
 
 const info_urgentNews = {
-    'diretoryImage' : 'abcdefg.jpg',
-    'title' : 'Marista fecha suas portas nesssa quinta-feira!',
-    'description' : 'Não faz muito tempo que a instituição Marista Ir. Acácio vem passando por dificuldades.',
-    'datePublic' : '2023-07-03' /* Formato : 0000-00-00 - Ex. 2023-10-01 - Ano-mês-Dia*/
+    'diretoryImage' : 'news-1_1.jpg',
+    'title' : 'A geração mais defasada no mundo da leitura',
+    'description' : 'Nas últimas décadas, o mundo presenciou uma revolução tecnológica sem precedentes. As distâncias diminuíram, os processos foram acelerados e passamos a ter respostas a problemas complexos da vida na palma das nossas mãos.',
+    'datePublic' : '2023-07-28' /* Formato : 0000-00-00 - Ex. 2023-10-01 - Ano-mês-Dia*/
 };
 
 // -------------------------------------------------------------------------------------------------------------------------
@@ -142,7 +142,7 @@ document.querySelector('#urgentNews').innerHTML = (`
     <div class="card mb-3 p-1 m-2 cardDark" style="max-width: 90%;">
         <div class="row g-0">
             <div class="col-md-4">
-                <img src="./components/images/newspaperImages/${info_urgentNews.diretoryImage}" class="img-fluid rounded-start" alt="Imagem">
+                <img src="./newsPaper/images/${info_urgentNews.diretoryImage}" class="img-fluid rounded-start" alt="Imagem">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
@@ -165,7 +165,7 @@ document.querySelector('#sideNews').innerHTML = (`
                 <div class="card-body">
                     <h5 class="card-title cardDark-text">${infoSideNews.title1}</h5>
                     <p class="card-text cardDark-text">${infoSideNews.description1}</p>
-                    <a href="newsPaper/?idNews=2" class="btn btn-primary">Ver notícia</a>
+                    <a href="newsPaper/news2.html" class="btn btn-primary">Ver notícia</a>
                 </div>
             </div>
         </div>
@@ -207,7 +207,7 @@ document.querySelector('#recommendedNews').innerHTML = (`
 
 document.querySelector('#cardsNews').innerHTML = (`
     <div class="card cardResponsive cardDark" style="width: 18rem;">
-        <img src="./components/images/newspaperImages/${newsCards.diretoryImage1}" class="card-img-top" alt="...">
+        <img src="./newsPaper/images/${newsCards.diretoryImage1}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title cardDark-text">${newsCards.title1}</h5>
             <p class="card-text cardDark-text">${newsCards.description1}</p>
@@ -220,7 +220,7 @@ document.querySelector('#cardsNews').innerHTML = (`
     </div>
 
     <div class="card cardResponsive cardDark" style="width: 18rem;">
-        <img src="./components/images/newspaperImages/${newsCards.diretoryImage2}" class="card-img-top" alt="...">
+        <img src="./newsPaper/images/${newsCards.diretoryImage2}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title cardDark-text">${newsCards.title2}</h5>
             <p class="card-text cardDark-text">${newsCards.description2}</p>
@@ -233,7 +233,7 @@ document.querySelector('#cardsNews').innerHTML = (`
     </div>
 
     <div class="card cardResponsive cardDark" style="width: 18rem;">
-        <img src="./components/images/newspaperImages/${newsCards.diretoryImage3}" class="card-img-top" alt="...">
+        <img src="./newsPaper/images/${newsCards.diretoryImage3}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title cardDark-text">${newsCards.title3}</h5>
             <p class="card-text cardDark-text">${newsCards.description3}</p>
@@ -246,7 +246,7 @@ document.querySelector('#cardsNews').innerHTML = (`
     </div>
 
     <div class="card cardResponsive cardDark" style="width: 18rem;">
-        <img src="./components/images/newspaperImages/${newsCards.diretoryImage4}" class="card-img-top" alt="...">
+        <img src="./newsPaper/images/${newsCards.diretoryImage4}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title cardDark-text">${newsCards.title4}</h5>
             <p class="card-text cardDark-text">${newsCards.description4}</p>

@@ -77,3 +77,9 @@ footer {
     font-weight: 700;
     font-family: sans-serif;
 }
+
+@media screen and (max-width: 500px) {
+    p {
+        font-size: 1.2rem !important;
+    }
+}
