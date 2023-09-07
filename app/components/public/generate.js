@@ -1,42 +1,38 @@
 // -------------------------------------------------------------------------------------------------------------------------
 
-/*
-    Para inserir novos autores, basta inserir seu nome no índice > 0 < 
-// */
-
 const authors = [
-    { 0 : 'vitor', 1 : '001'},
-    { 0 : 'julia', 1 : '002'},
-    { 0 : 'marcos', 1 : '003'},
-    { 0 : 'joão', 1 : '004'},
-    { 0 : 'barry', 1 : '005'},
-    { 0 : 'luís', 1 : '006'},
-    { 0 : 'aline', 1 : '007'},
-    { 0 : 'thaynna', 1 : '008'},
-    { 0 : 'tadeu', 1 : '009'},
+    { 0 : 'Autor 1', 1 : '001'},
+    { 0 : 'Autor 2', 1 : '002'},
+    { 0 : 'Autor 3', 1 : '003'},
+    { 0 : 'Autor 4', 1 : '004'},
+    { 0 : 'Autor 5', 1 : '005'},
 ];
 
 
-$('#searchAuthorBtn').click(() => {
-    var author = $('#searchAuthor').val();
-    var authorsFind = [];
-    document.querySelector('.resAuthors').innerHTML = "";
-    document.querySelector('.resAuthors').innerHTML += `<h1 class='titleElement'>Resultado(s):</h1><hr>`;
-    let numTrue = false;
+// document.getElementById('searchAuthor').addEventListener('input', () => generateAuthor());
 
-    authors.forEach(element => {
-        if (element[0].toLowerCase() === author.toLowerCase()) {
-            numTrue = true;
-            document.querySelector('.resAuthors').innerHTML += `<a href="#" class="resText">${element[0]}</a>`;
-            authorsFind.push(element[1]);
-        }
-    });
+// $('#searchAuthorBtn').click(() => generateAuthor());
 
-    if (!numTrue) {
-        document.querySelector('.resAuthors').innerHTML = "";
-        document.querySelector('.resAuthors').innerHTML += `<h1 class='titleElement'>0 resultados para a busca!</h1><hr>`;
-    }
-});
+// const generateAuthor = () => {
+//     var author = $('#searchAuthor').val();
+//     var authorsFind = [];
+//     document.querySelector('.resAuthors').innerHTML = "";
+//     document.querySelector('.resAuthors').innerHTML += `<h1 class='titleElement'>Resultado(s):</h1><hr>`;
+//     let numTrue = false;
+
+//     authors.forEach(element => {
+//         if (element[0].toLowerCase() === author.toLowerCase()) {
+//             numTrue = true;
+//             document.querySelector('.resAuthors').innerHTML += `<a href="#" class="resText">${element[0]}</a>`;
+//             authorsFind.push(element[1]);
+//         }
+//     });
+
+//     if (!numTrue) {
+//         document.querySelector('.resAuthors').innerHTML = "";
+//         document.querySelector('.resAuthors').innerHTML += `<h1 class='titleElement'>0 resultados para a busca!</h1><hr>`;
+//     };
+// };
 
 //  ------------------------------------------ | Geração_de_notícia_em_destaque | ------------------------------------------
 
@@ -125,15 +121,15 @@ const recentNews = {
 
 // ----------------------------------| generate_Authors | -----------------------------------------------
 
-const generateAuthors = () => {
-    authors.forEach(element => { 
-        document.querySelector('#containerAuthors').innerHTML += (`
-            <li><a class="dropdown-item" id="codeAuthor${element[1]}" href="#">${element[0]}</a></li>`
-        );
-    });
-};
+// const generateAuthors = () => {
+//     authors.forEach(element => { 
+//         document.querySelector('#containerAuthors').innerHTML += (`
+//             <li><a class="dropdown-item" id="codeAuthor${element[1]}" href="#">${element[0]}</a></li>`
+//         );
+//     });
+// };
 
-generateAuthors();
+// generateAuthors();
 
 // -------------------------------------------------------------------------------------------------------------------------
 
