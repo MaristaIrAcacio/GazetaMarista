@@ -58,8 +58,8 @@ const calcDate = (date) => {
 //  ------------------------------------------ | Geração_de_notícia_em_destaque | ------------------------------------------
 
 const infoSideNews = {
-    'title1' : 'Resgate de animais silvestres!',
-    'description1' : 'Centenas de animais silvestres resgatados nesta última quinta-feita(22/05/2023).',
+    'title1' : 'Visita na Tarobá movimenta a Escola Social Marista Ir. Acácio',
+    'description1' : 'A visita Tarobá movimentou nos dias 10, 17 e 24 de março de 2023. Esse movimento aconteceu entre os alunos do primeiro ano do Ensino Médio que estão envolvidos no projeto do Jornal escolar.',
 
     'title2' : 'Polícia prende chefe de quadrilha.',
     'description2' : 'Faz uma semana que a polícia federal tem contido um dos seus maiores detentos.',
