@@ -60,3 +60,7 @@ document.getElementById("btn-suport").addEventListener("click", async() => {
         });
       };
 });
+
+function clickSuport() {
+    $('#btn-suport').click();
+};

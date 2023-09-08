@@ -61,17 +61,17 @@ const infoSideNews = {
     'title1' : 'Visita na Tarobá movimenta a Escola Social Marista Ir. Acácio',
     'description1' : 'A visita Tarobá movimentou nos dias 10, 17 e 24 de março de 2023. Esse movimento aconteceu entre os alunos do primeiro ano do Ensino Médio que estão envolvidos no projeto do Jornal escolar.',
 
-    'title2' : 'Polícia prende chefe de quadrilha.',
-    'description2' : 'Faz uma semana que a polícia federal tem contido um dos seus maiores detentos.',
+    'title2' : 'Meetup',
+    'description2' : 'Sexta-feira, 30 de junho de 2023, em Londrina, na instituição Marista Escola Social Irmão Acácio, em parceria com a Redfoot, ocorreu o oitavo Meetup.',
 };
 
 
 //  ------------------------------------------ | recommended_News | ------------------------------------------
 
 const recommendedNews = {
-    'title' : 'Show neste domingo em Rio de Janeiro',
-    'description' : 'Não perca a chance de adiquirir já seu ingresso.',
-    'dataPublic' : '2023-06-01',
+    'title' : 'Marista Ir. Acácio',
+    'description' : 'Atendimento a crianças e adolescentes em situação de vulnerabilidade social.',
+    'url' : 'https://linktr.ee/maristairacacio',
 };
 
 
@@ -107,18 +107,6 @@ const newsCards= {
 
 
 
-//  ------------------------------------------ | news_Cards| ------------------------------------------
-
-const QuoteOfTheDay = {
-    'quote' : 'Nunca se esqueça de quem você é!',
-    'author' : 'Vitor Júlio',
-};
-
-const recentNews = {
-    'title' : 'Nasce bebê cegonha!',
-    'description' : 'Hipotatamos são legais^-^, mas são assustadores.',
-};
-
 // ----------------------------------| generate_Authors | -----------------------------------------------
 
 // const generateAuthors = () => {
@@ -145,7 +133,7 @@ document.querySelector('#urgentNews').innerHTML = (`
                     <h5 class="card-title cardDark-text">${info_urgentNews.title}</h5>
                     <p class="card-text cardDark-text">${info_urgentNews.description}</p>
                     <p class="card-text cardDark-text cardDark-text"><small class="text-body-secondary cardDark-text">${calcDate(info_urgentNews.datePublic)} dias atrás!</small></p>
-                    <a href="newsPaper/news1.html" class="btn btn-primary">Visualizar notícia</a>
+                    <a href="newsPaper/news1.html" class="btn btn-primary">Visualizar</a>
                 </div>
             </div>
         </div>
@@ -161,7 +149,7 @@ document.querySelector('#sideNews').innerHTML = (`
                 <div class="card-body">
                     <h5 class="card-title cardDark-text">${infoSideNews.title1}</h5>
                     <p class="card-text cardDark-text">${infoSideNews.description1}</p>
-                    <a href="newsPaper/news2.html" class="btn btn-primary">Ver notícia</a>
+                    <a href="newsPaper/news2.html" class="btn btn-primary">Ver mais...</a>
                 </div>
             </div>
         </div>
@@ -170,7 +158,7 @@ document.querySelector('#sideNews').innerHTML = (`
                 <div class="card-body">
                     <h5 class="card-title cardDark-text">${infoSideNews.title2}</h5>
                     <p class="card-text cardDark-text">${infoSideNews.description2}</p>
-                    <a href="newsPaper/?idNews=3" class="btn btn-primary">Ver notícia</a>
+                    <a href="newsPaper/news3.html" class="btn btn-primary">Ver mais...</a>
                 </div>
             </div>
         </div>
@@ -189,10 +177,10 @@ document.querySelector('#recommendedNews').innerHTML = (`
         <div class="card-body">
             <h5 class="card-title cardDark-text">${recommendedNews.title}</h5>
             <p class="card-text cardDark-text">${recommendedNews.description}</p>
-            <a href="newsPaper/?idNews=4" class="btn btn-primary">Acessar site</a>
+            <a target="_blank" href="${recommendedNews.url}" class="btn btn-primary">Acessar site</a>
             </div>
             <div class="card-footer text-body-secondary cardDark-text">
-            ${calcDate(recommendedNews.dataPublic)} days ago
+            Venha conhecer nossa plataforma online!
         </div>
     </div>
 `);
@@ -255,6 +243,72 @@ document.querySelector('#cardsNews').innerHTML = (`
     </div>
 `);
 
+
+const inspiringPhrases = [
+    {
+        phrase: "Nunca se esqueça de quem você é!",
+        author: "Mufasa - O Rei Leão"
+    },
+    {
+        phrase: "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
+        author: "Robert Collier"
+    },
+    {
+        phrase: "Acredite que você pode e você já está no meio do caminho.",
+        author: "Theodore Roosevelt"
+    },
+    {
+        phrase: "O futuro pertence àqueles que acreditam na beleza de seus sonhos.",
+        author: "Eleanor Roosevelt"
+    },
+    {
+        phrase: "A vida é o que acontece enquanto você está ocupado fazendo outros planos.",
+        author: "John Lennon"
+    },
+    {
+        phrase: "O importante é nunca desistir, mesmo quando você cai.",
+        author: "Mickey - Rocky Balboa"
+    },
+    {
+        phrase: "O sucesso é ir de fracasso em fracasso sem perder o entusiasmo.",
+        author: "Winston Churchill"
+    },
+    {
+        phrase: "O único modo de fazer um grande trabalho é amar o que você faz.",
+        author: "Steve Jobs"
+    },
+    {
+        phrase: "Não importa o que você decidiu. O que importa é que isso te faça feliz.",
+        author: "Arnold Schwarzenegger"
+    },
+    {
+        phrase: "A persistência realiza o impossível.",
+        author: "Matt Biondi"
+    },
+    {
+        phrase: "Nada é impossível, a palavra em si diz 'eu sou possível'!",
+        author: "Audrey Hepburn"
+    },
+    {
+        phrase: "O sucesso é a melhor vingança.",
+        author: "Frank Sinatra"
+    }
+];
+
+
+const randomPhrase = inspiringPhrases[Math.floor(Math.random() * inspiringPhrases.length)];
+
+//  ------------------------------------------ | news_Cards| ------------------------------------------
+
+const QuoteOfTheDay = {
+    'quote' : randomPhrase.phrase,
+    'author' : randomPhrase.author,
+};
+
+const recentNews = {
+    'title' : 'Nasce bebê cegonha!',
+    'description' : 'Hipotatamos são legais^-^, mas são assustadores.',
+};
 
 document.querySelector('#quoteAndrecent').innerHTML = (`
     <div class="card cardDark">
