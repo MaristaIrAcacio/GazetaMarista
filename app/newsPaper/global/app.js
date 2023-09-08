@@ -20,7 +20,7 @@ wordSpans.forEach(wordSpan => {
     wordSpan.addEventListener('mouseover', () => {
         timeoutId = setTimeout(() => {
             handleMouseOver(wordSpan.textContent, wordSpan);
-        }, 700); // Alteramos o atraso para 700ms
+        }, 800); // Alteramos o atraso para 700ms
     });
 
     wordSpan.addEventListener('mouseout', () => {
@@ -31,71 +31,60 @@ wordSpans.forEach(wordSpan => {
 
 async function handleMouseOver(word, tag) {
     tag.classList.add("highlighted");
-
-    const wordTranslate = await translateText(word, 'en');
-
-    const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${wordTranslate}`;
-    
-    try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        if (data.length > 0) {
-            var textSign = "";
-            const significado = data[0].meanings[0].definitions[0].definition;
-            for(let i = 0; i < data[0].meanings[0].definitions.length; i ++) {
-                textSign += `${data[0].meanings[0].definitions[i].definition}`
-            };
-
-            const significadoPT = await translateText(significado,'pt-br');
-            openPopUp(significadoPT,tag)
-        } else {
-            console.log(`Nenhum significado encontrado para "${word}"`);
-            openPopUp('Sem informações :/',tag);
-        }
-    } catch (error) {
-    };
-}
+    openPopUp(word,tag);
+};
 
 function handleMouseOut(tag) {
     tag.classList.remove("highlighted");
-    closePopUp();
 };
 
-async function translateText(texto, idiomaDestino) {
-    const apiUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${idiomaDestino}&dt=t&q=${encodeURIComponent(texto)}`;
-
-    try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-
-        if (response.ok) {
-            const traducao = data[0][0][0];
-            return traducao;
-        } else {
-            console.error(`Erro na tradução: ${data}`);
-            return null;
-        }
-    } catch (error) {
-        console.error(`Erro ao traduzir: ${error}`);
-        return null;
-    };
-};
-
-function openPopUp(conteudo, tag) {
+function openPopUp(word, tag) {
+    // Configurar PopUp
     const popup = $("#popup");
-    const popupContent = $("#popup-content");
 
+    const windowWidth = window.innerWidth;
     const tagRect = tag.getBoundingClientRect();
+    const popupLeft = tagRect.right + window.scrollX + 10;
+    const popupRight = tagRect.left + window.scrollX + 10;
+    let popupDirection = "left"; // Direção padrão
 
-    const popupLeft = tagRect.right + window.scrollX + 10; // 10 pixels de deslocamento
+    if (popupLeft + popup.outerWidth() > windowWidth) {
+        popupDirection = "right";
+    }
+
     const popupTop = tagRect.top + window.scrollY - popup.outerHeight() / 2;
 
-    popup.css({ left: `${popupLeft}px`, top: `${popupTop}px` });
-    popupContent.text(conteudo);
+    // Definir um tamanho mínimo para o popup (por exemplo, 200px de largura)
+    const tamanhoMinimo = 200;
+
+    // Criar conteúdo do popup com base na direção
+    const popupContent = `
+        <a target="_blank" href="https://www.sinonimos.com.br/${word}/">Veja sinônimos de "<span class="wordPopUp">${word}</span>" aqui.</a>
+        <hr>
+        <a target="_blank" href="https://www.dicio.com.br/${word}/">Veja significado de "<span class="wordPopUp">${word}</span>" aqui.</a>
+    `;
+
+    popup.html(popupContent);
+
     popup.show();
+
+    // Verificar se o tamanho do popup é menor que o tamanho mínimo
+    if (popup.outerWidth() < tamanhoMinimo) {
+        popup.css({ width: `${tamanhoMinimo}px` });
+    }
+
+    if (popupDirection === "left") {
+        popup.css({ left: `${popupLeft}px`, top: `${popupTop}px` });
+    } else {
+        popup.css({ right: `${windowWidth - popupRight}px`, top: `${popupTop}px` });
+    }
+
+    setTimeout(() => {
+        closePopUp(popup);
+    }, 2000);
 };
 
-function closePopUp() {
-    const popup = $("#popup");
+
+function closePopUp(popup) {
     popup.hide();
-};
+}

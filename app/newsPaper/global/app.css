@@ -93,12 +93,16 @@ footer {
     z-index: 99;
     position: absolute;
     background: rgb(241, 241, 241);
-    border: 1px solid #000;
-    border-radius: 8px;
-    padding: .3rem;
+    border: 1px solid #00000027;
+    border-radius: 1px;
+    padding: .3rem 1rem;
     display: none;
 }
 
-#popup-content {
+#popup > a {
     font-family: sans-serif;
+}
+
+.wordPopUp {
+    color: rgb(99, 99, 99);
 }
