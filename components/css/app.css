@@ -257,7 +257,8 @@ body::-webkit-scrollbar-thumb {
 
 .containerButtonsHeader {
     display: flex;
-    gap: .5rem;
+    width: 48px;
+    height: 48px;
 }
 
 .containerSettings {
