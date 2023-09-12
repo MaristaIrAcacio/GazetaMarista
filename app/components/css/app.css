@@ -486,9 +486,21 @@ body::-webkit-scrollbar-thumb {
     fill: #F53844;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
 }
-  
-
-  
+ 
 .button:hover::before {
     translate: 0 0;
+}
+
+.btn-share {
+    border-radius: 12px;
+    border: 1px solid #fefefe;
+    background: transparent;
+    color: #fefefe;
+    padding: .3rem 1rem;
+    transition: .33s;
+}
+
+.btn-share:hover {
+    background: #fefefe;
+    color: #183153;
 }

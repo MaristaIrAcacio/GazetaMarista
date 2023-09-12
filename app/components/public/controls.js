@@ -64,3 +64,18 @@ document.getElementById("btn-suport").addEventListener("click", async() => {
 function clickSuport() {
     $('#btn-suport').click();
 };
+
+const shareFacebook = (data) => {
+    const url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('https://' + data);
+    window.open(url, '_blank');
+};
+
+const shareTwitter = (data) => {
+    const url = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent('https://' + data);
+    window.open(url, '_blank');
+};
+
+const shareWhatsapp = (data) => {
+    const url = 'https://api.whatsapp.com/send?text=' + encodeURIComponent('https://' + data);
+    window.open(url, '_blank');
+};
