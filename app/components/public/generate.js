@@ -38,9 +38,8 @@ const authors = [
 
 const info_urgentNews = {
     'diretoryImage' : 'news-1_1.jpg',
-    'title' : 'A geração mais defasada no mundo da leitura',
-    'description' : 'Nas últimas décadas, o mundo presenciou uma revolução tecnológica sem precedentes. As distâncias diminuíram, os processos foram acelerados e passamos a ter respostas a problemas complexos da vida na palma das nossas mãos.',
-    'datePublic' : '2023-07-28' /* Formato : 0000-00-00 - Ex. 2023-10-01 - Ano-mês-Dia*/
+    'title' : 'PRIMEIRO STARTUP WEEKEND SOCIAL DA AMÉRICA LATINA ACONTECE NA ESCOLA SOCIAL MARISTA IRMÃO ACÁCIO',
+    'description' : 'E no final do mês de abril nos dias 28, 29 e 30 tive o privilégio de estar na primeira Startup Weekend Social da América Latina,que aconteceu nas dependências da nossa Escola Social.',
 };
 
 // -------------------------------------------------------------------------------------------------------------------------
@@ -61,8 +60,8 @@ const infoSideNews = {
     'title1' : 'Visita na Tarobá movimenta a Escola Social Marista Ir. Acácio',
     'description1' : 'A visita Tarobá movimentou nos dias 10, 17 e 24 de março de 2023. Esse movimento aconteceu entre os alunos do primeiro ano do Ensino Médio que estão envolvidos no projeto do Jornal escolar.',
 
-    'title2' : 'Meetup',
-    'description2' : 'Sexta-feira, 30 de junho de 2023, em Londrina, na instituição Marista Escola Social Irmão Acácio, em parceria com a Redfoot, ocorreu o oitavo Meetup.',
+    'title2' : 'PROJETO LIVRO HUMANO ACONTECE NA SEMANA DA MULHER',
+    'description2' : 'O projeto livro humano, nasceu na Dinamarca no ano de 2000, com a intenção de ir contra a violência.',
 };
 
 
@@ -79,29 +78,25 @@ const recommendedNews = {
 //  ------------------------------------------ | news_Cards| ------------------------------------------
 
 const newsCards= {
-    'title1' : 'Show neste domingo em Rio de Janeiro',
-    'description1' : 'Não perca a chance de adiquirir já seu ingresso.',
-    'diretoryImage1' : 'abcdefg.jpg',
-    'publicDate1' : '2023-03-21',
-    'author1' : 'João',
+    'title1' : 'Dia Internacional da Poesia movimenta Escola Social',
+    'description1' : 'Quinta-feira, 21 de março em Londrina nas dependências da Escola Social Marista Irmão Acácio, celebramos o dia internacional da poesia com a presença especial de Ligia Braga.',
+    'diretoryImage1' : 'news-4_1.jpg',
+    'author1' : 'Witória (2º ano B)',
 
-    'title2' : 'Show neste domingo em Rio de Janeiro',
-    'description2' : 'Não perca a chance de adiquirir já seu ingresso.',
-    'diretoryImage2' : '123456.jpg',
-    'publicDate2' : '2023-05-21',
-    'author2' : 'João',
+    'title2' : 'MAIO LARANJA 2023',
+    'description2' : 'Há 50 anos, no dia 18 de Maio de 1973, a menina Araceli, de 08 anos, foi sequestrada enquanto ia para a escola, foi drogada, estuprada e morta por jovens de classe média alta na cidade de Vitória (ES). Veja mais sobre.',
+    'diretoryImage2' : 'news-5_1.jpg',
+    'author2' : 'Aline Querino - Pastoral',
 
-    'title3' : 'Show neste domingo em Rio de Janeiro',
-    'description3' : 'Não perca a chance de adiquirir já seu ingresso.',
-    'diretoryImage3' : '654321.jpg',
-    'publicDate3' : '2023-01-30',
-    'author3' : 'João',
+    'title3' : 'DETECTORES DE METAIS EM CRECHES E ESCOLAS É APROVADO PELA CÂMARA MUNICIPAL DE LONDRINA',
+    'description3' : 'Câmara Municipal de Londrina, no dia 13 de abril de 2023, aprovou unanimamente o projeto de lei 61/2023, que autoriza a instalação de detectores de metais em creches e escolas da rede municipal.',
+    'diretoryImage3' : 'news-6_1.jpg',
+    'author3' : 'Thalyta das Neves Ferreira (2º ano A)',
 
-    'title4' : 'Show neste domingo em Rio de Janeiro',
-    'description4' : 'Não perca a chance de adiquirir já seu ingresso.',
-    'diretoryImage4' : '123456.jpg',
-    'publicDate4' : '2023-04-16',
-    'author4' : 'João',
+    'title4' : 'SER BRASILEIRO É SER DIFERENTE TODOS OS DIAS',
+    'description4' : 'Brasileiro na verdade é uma profissão... Veja mais',
+    'diretoryImage4' : 'news-7_1.jpg',
+    'author4' : 'Vitória Gabrieli Silva de Oliveira (2º ano C)',
 };
 
 
@@ -132,7 +127,6 @@ document.querySelector('#urgentNews').innerHTML = (`
                 <div class="card-body">
                     <h5 class="card-title cardDark-text">${info_urgentNews.title}</h5>
                     <p class="card-text cardDark-text">${info_urgentNews.description}</p>
-                    <p class="card-text cardDark-text cardDark-text"><small class="text-body-secondary cardDark-text">${calcDate(info_urgentNews.datePublic)} dias atrás!</small></p>
                     <a href="newsPaper/news1.html" class="btn btn-primary">Visualizar</a>
                 </div>
             </div>
@@ -195,10 +189,10 @@ document.querySelector('#cardsNews').innerHTML = (`
         <div class="card-body">
             <h5 class="card-title cardDark-text">${newsCards.title1}</h5>
             <p class="card-text cardDark-text">${newsCards.description1}</p>
-            <a href="newsPaper/?idNews=5" class="btn btn-primary">Visualizar notícia</a>
+            <a href="newsPaper/news4.html" class="btn btn-primary">Visualizar notícia</a>
             <br><br>
             <div class="card-footer text-body-secondary cardDark-text">
-                ${calcDate(newsCards.publicDate1)} days ago <br> ${newsCards.author1}
+                ${newsCards.author1}
             </div>
         </div>
     </div>
@@ -208,10 +202,10 @@ document.querySelector('#cardsNews').innerHTML = (`
         <div class="card-body">
             <h5 class="card-title cardDark-text">${newsCards.title2}</h5>
             <p class="card-text cardDark-text">${newsCards.description2}</p>
-            <a href="newsPaper/?idNews=6" class="btn btn-primary">Visualizar notícia</a>
+            <a href="newsPaper/news5.html" class="btn btn-primary">Visualizar notícia</a>
             <br><br>
             <div class="card-footer text-body-secondary cardDark-text">
-                ${calcDate(newsCards.publicDate2)} days ago <br> ${newsCards.author2}
+                ${newsCards.author2}
             </div>
         </div>
     </div>
@@ -221,10 +215,10 @@ document.querySelector('#cardsNews').innerHTML = (`
         <div class="card-body">
             <h5 class="card-title cardDark-text">${newsCards.title3}</h5>
             <p class="card-text cardDark-text">${newsCards.description3}</p>
-            <a href="newsPaper/?idNews=7" class="btn btn-primary">Visualizar notícia</a>
+            <a href="newsPaper/news6.html" class="btn btn-primary">Visualizar notícia</a>
             <br><br>
             <div class="card-footer text-body-secondary cardDark-text">
-                ${calcDate(newsCards.publicDate3)} days ago <br> ${newsCards.author3}
+                ${newsCards.author3}
             </div>
         </div>
     </div>
@@ -234,10 +228,10 @@ document.querySelector('#cardsNews').innerHTML = (`
         <div class="card-body">
             <h5 class="card-title cardDark-text">${newsCards.title4}</h5>
             <p class="card-text cardDark-text">${newsCards.description4}</p>
-            <a href="newsPaper/?idNews=8" class="btn btn-primary">Visualizar notícia</a>
+            <a href="newsPaper/news7.html" class="btn btn-primary">Visualizar notícia</a>
             <br><br>
             <div class="card-footer text-body-secondary cardDark-text">
-                ${calcDate(newsCards.publicDate4)} days ago <br> ${newsCards.author4}
+                ${newsCards.author4}
             </div>
         </div>
     </div>
@@ -306,8 +300,7 @@ const QuoteOfTheDay = {
 };
 
 const recentNews = {
-    'title' : 'Nasce bebê cegonha!',
-    'description' : 'Hipotatamos são legais^-^, mas são assustadores.',
+    'title' : 'A INCRÍVEL HISTÓRIA DE CAROLINA MARIA DE JESUS',
 };
 
 document.querySelector('#quoteAndrecent').innerHTML = (`
@@ -324,11 +317,33 @@ document.querySelector('#quoteAndrecent').innerHTML = (`
     </div>
 
     <div class="card cardDark">
-        <h5 class="card-header cardDark-text">Última semana</h5>
+        <h5 class="card-header cardDark-text">Veja também</h5>
         <div class="card-body">
             <h5 class="card-title cardDark-text">${recentNews.title}</h5>
-            <p class="card-text cardDark-text">${recentNews.description}</p>
-            <a href="newsPaper/?idNews=9" class="btn btn-primary">Ver notícia</a>
+            <a href="newsPaper/news8.html" class="btn btn-primary">Ver mais</a>
+        </div>
+    </div>
+`);
+
+const recentNews2 = {
+    'title' : 'O RACISMO E A VIOLÊNCIA POLICIAL EM: "O ÓDIO QUE VOCÊ SEMEIA"',
+    'title2' : 'MUSCULAÇÃO A ONDA DO MOMENTO',
+};
+
+document.querySelector('#quoteAndrecent2').innerHTML = (`
+    <div class="card cardDark">
+        <h5 class="card-header cardDark-text">Veja também</h5>
+        <div class="card-body">
+            <h5 class="card-title cardDark-text">${recentNews2.title}</h5>
+            <a href="newsPaper/news9.html" class="btn btn-primary">Ver mais</a>
+        </div>
+    </div>
+
+    <div class="card cardDark">
+        <h5 class="card-header cardDark-text">Veja também</h5>
+        <div class="card-body">
+            <h5 class="card-title cardDark-text">${recentNews2.title2}</h5>
+            <a href="newsPaper/news10.html" class="btn btn-primary">Ver mais</a>
         </div>
     </div>
 `);
