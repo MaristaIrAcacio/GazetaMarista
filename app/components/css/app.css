@@ -217,9 +217,35 @@ body::-webkit-scrollbar-thumb {
 .headerContainermain {
     width: 100%;
     display: flex;
-    justify-content: end;
     padding: .4rem 2rem;
     gap: .3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timerDOM {
+    color: #a1a1a1;
+    margin-top: 10px;
+}
+
+.timerType {
+    font-size: 1.2rem;
+    margin-left: -5px;
+    margin-top: -2px;
+    color: var(--red);
+    font-weight: 900
+}
+
+.infoWord-container {
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
+}
+
+.barDivision {
+    width: 1px;
+    height: 3rem;
+    background: rgba(46, 45, 45, 0.329);
 }
 
 .firstRow {
@@ -598,8 +624,16 @@ body::-webkit-scrollbar-thumb {
 }
 
 .iconsWeather {
-    background: #888888;
-    border-radius: 24px;
+    border-radius: 8px;
+    background: rgba(31, 30, 30, 0.26);
+}
+
+.iconWeather {
+    width: 4rem;
+}
+
+.container-res {
+    background: rgba(31, 30, 30, 0.171);
 }
 
 @media screen and (max-width: 1000px) {
@@ -647,4 +681,51 @@ body::-webkit-scrollbar-thumb {
         width: 100% !important;
         margin-left: 0 !important;
     }
+}
+
+.btn-headerContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.imgUrlLink {
+    height: 20rem;
+    object-fit: cover;
+}
+
+.container-writers {
+    padding: .3rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .1rem;
+}
+
+.author-element {
+    border: 1px solid #fefefe;
+    padding: .5rem .1rem;
+    border-radius: 8px;
+}
+
+.image-redator {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nameWriter {
+    font-size: 1.8rem;
+}
+
+.author-element > a {
+    color: #fefefe;
+}
+
+.logoFooterAbout {
+    width: 100%;
+}
+
+.timeRead {
+    color: #888;
+    font-size: 1.1rem;
 }

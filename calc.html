@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="calc">
+    <button id="calcbtn">calcular</button>
+    <script>
+        document.getElementById('calcbtn').addEventListener('click', () => {
+            function contarPalavras(texto) {
+                return texto.split(/\s+/).length;      
+            };
+            
+            const velocidadeMediaLeitura = 200; // Palavras por minuto
+            
+            function calcularTempoLeitura(texto) {
+                const numPalavras = contarPalavras(texto);
+                const tempoLeituraMinutos = numPalavras / velocidadeMediaLeitura;
+                return tempoLeituraMinutos;
+            };
+            
+            const tempoLeituraArtigo = calcularTempoLeitura(document.getElementById('calc').value);
+            
+            console.log(`Tempo estimado de leitura: ${tempoLeituraArtigo.toFixed(2)} minutos`); 
+                    });
+    </script>
+</body>
+</html>

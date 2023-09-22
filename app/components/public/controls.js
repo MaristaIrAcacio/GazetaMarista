@@ -14,51 +14,55 @@ document.getElementById("btn-suport").addEventListener("click", async() => {
         inputPlaceholder: 'Enter your email address'
       })
       
-      const { value: text } = await Swal.fire({
-        input: 'textarea',
-        inputLabel: 'Message',
-        inputPlaceholder: 'Type your message here...',
-        inputAttributes: {
-          'aria-label': 'Type your message here'
-        },
-        showCancelButton: true
-      })
-      
-      if (text&&email) {
-        const data = {
-            email: email,
-            mensagem: text
-        };
-    
-        fetch('https://formspree.io/f/mleynzjw', {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            Swal.fire(
-                'Sua mensagem foi enviada!',
-                'Aguarde enquanto processamos sua mensagem',
-                'success'
-            );
-        })
-        .catch(error => {
+      if (email) {
+        const { value: text } = await Swal.fire({
+            input: 'textarea',
+            inputLabel: 'Message',
+            inputPlaceholder: 'Type your message here...',
+            inputAttributes: {
+              'aria-label': 'Type your message here'
+            },
+            showCancelButton: true
+        });
+
+        if (text&&email) {
+            const data = {
+                email: email,
+                mensagem: text
+            };
+        
+            fetch('https://formspree.io/f/mleynzjw', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                Swal.fire(
+                    'Sua mensagem foi enviada!',
+                    'Aguarde enquanto processamos sua mensagem',
+                    'success'
+                );
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Algo deu errado! | Tente novamente mais tarde',
+                });
+            });
+          } else {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Algo deu errado! | Tente novamente mais tarde',
+                text: 'Preencha todos os campos!',
             });
-        });
-      } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Preencha todos os campos!',
-        });
+          };
+
       };
+      
 });
 
 function clickSuport() {
@@ -344,3 +348,32 @@ const currentSign = getZodiacSign(currentDate);
 $('#signDay').text(currentSign.name);
 $('.description').text(currentSign.description);
 $('#colorDay').text(currentSign.color);
+
+function updateClock() {
+    const relogioElement = document.querySelector('.hours');
+
+    const dataAtual = new Date();
+    let horas = dataAtual.getHours();
+    let minutos = dataAtual.getMinutes();
+    let periodo = 'AM';
+
+    if (horas >= 12) {
+        periodo = 'PM';
+        if (horas > 12) {
+            horas -= 12;
+        };
+    };
+    if (horas < 10) {
+        horas = '0' + horas;
+    }
+    if (minutos < 10) {
+        minutos = '0' + minutos;
+    }
+
+    relogioElement.textContent = horas + ':' + minutos;
+    $('.timerType').text(periodo)
+};
+
+setInterval(updateClock, 1000);
+
+updateClock();
