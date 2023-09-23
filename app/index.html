@@ -17,6 +17,7 @@
 
     <!-- | Import Jquery (CDN) | -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- | Style_Sheets | -->
     <link rel="stylesheet" href="./components/css/fonts.css">
@@ -30,10 +31,6 @@
 
     <!-- | -- Import Javascripts -- | -->
     <script src="./components/public/controls.js" defer></script>
-
-    <style>
-      .inputFontColor::placeholder { color: #fefefe79 }
-    </style>
 
 </head>
 <body>
@@ -59,61 +56,46 @@
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
                   <a onclick="breve()" class="nav-link fs-5" href="">
-                    <i class="bi bi-activity"></i>
-                    Saúde
+                    <i class="bi bi-megaphone-fill"></i>
+                    A voz da Escola
                 </a>
                 </li>
                 <li class="nav-item">
                   <a onclick="breve()" class="nav-link fs-5" href="#">
-                    <i class="bi bi-controller"></i>
-                    Entretenimento
+                    <i class="bi bi-house-fill"></i>
+                    Acontece na Escola
                 </a>
                 </li>
                 <li class="nav-item">
                   <a onclick="breve()" class="nav-link fs-5" href="#">
-                    <i class="bi bi-scooter"></i>
-                    Esportes
+                    <i class="bi bi-buildings"></i>
+                    Londrina na Visão
                 </a>
                 </li>
                 <li class="nav-item">
                   <a onclick="breve()" class="nav-link fs-5" href="#">
-                    <i class="bi bi-calendar-heart"></i>
-                    Vida
-                </a>
-                </li>
-                <li class="nav-item">
-                  <a onclick="breve()" class="nav-link fs-5" href="#">
-                    <i class="bi bi-people"></i>
-                    Política
+                    <i class="bi bi-newspaper"></i>
+                    Atualidades
                 </a>
                 </li>
                 <li class="nav-item">
                   <a onclick="breve()" class="nav-link fs-5" href="#">
                     <i class="bi bi-person-hearts"></i>
-                    Bem-estar
+                    Fala Marista
                 </a>
                 </li>
                 <li class="nav-item">
                   <a onclick="breve()" class="nav-link fs-5" href="#">
+                    <i class="bi bi-journal-richtext"></i>
+                    Quadrinhos
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-5" href="./newsPaper/categories/recommended/">
                     <i class="bi bi-bookmark-check"></i>
                     Recomendados
                 </i></a>
                 </li>
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class='bx bxs-filter-alt' ></i>
-                      Autores
-                    </a>
-                    <ul id="containerAuthors" class="dropdown-menu dropdown-menu-dark">
-                    </ul>
-                  </li>
-                </ul>
-                <div class="d-flex" role="search">
-                  <input class="form-control inputFontColor me-2 bg-dark text-bg-dark" id="searchAuthor" type="search" placeholder="Procure por autores" aria-label="Search">
-                  <button id="searchAuthorBtn" class="btn btn-light" type="button">Procurar</button>
-                </div>
-                <br>
-                <div class="resAuthors"></div> -->
               </div>
             </div>
           </div>
@@ -131,11 +113,11 @@
               <div class="barDivision"></div>
             </section>
             <section class="btn-headerContainer">
-              <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+              <button class="btn btn-danger btnHeader" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                 <i class="bi bi-question-circle"></i>
                 Quem somos
               </button>
-              <button id="btn-suport" class="btn btn-danger" type="button"">
+              <button id="btn-suport" class="btn btn-danger btnHeader" type="button"">
                 <i class="bi bi-headset"></i>
                 Suporte
               </button>
@@ -566,7 +548,7 @@
           <button onclick="shareTwitter('maristairacacio.github.io/GazetaMarista/app/')" class="btn-share" id="share-twitter"><i class="bi bi-twitter"></i> Compartilhar no Twitter</button>
           <button onclick="shareWhatsapp('maristairacacio.github.io/GazetaMarista/app/')" class="btn-share" id="share-whatsapp"><i class="bi bi-whatsapp"></i> Compartilhar no WhatsApp</button>
       </div>
-  </footer>
+    </footer>
   
 </body>
 </html>

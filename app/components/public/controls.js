@@ -249,85 +249,85 @@ getGeolocation();
 const signs = [
     {
         name: "Áries",
-        start: new Date(2023, 2, 21), // 21 de março
-        end: new Date(2023, 3, 19),   // 19 de abril
+        start: new Date(2023, 3, 21), // 21 de março
+        end: new Date(2023, 4, 19),   // 19 de abril
         description: "Áries é o primeiro signo do zodíaco, representando o início de um novo ciclo. As pessoas de Áries são conhecidas por sua energia e determinação.",
         color: "vermelho"
     },
     {
         name: "Touro",
-        start: new Date(2023, 3, 20), // 20 de abril
-        end: new Date(2023, 4, 20),   // 20 de maio
+        start: new Date(2023, 4, 20), // 20 de abril
+        end: new Date(2023, 5, 20),   // 20 de maio
         description: "Touro é um signo prático e estável. As pessoas de Touro são conhecidas por sua lealdade e apreço pelo conforto.",
         color: "verde"
     },
     {
         name: "Gêmeos",
-        start: new Date(2023, 4, 21), // 21 de maio
-        end: new Date(2023, 5, 20),   // 20 de junho
+        start: new Date(2023, 5, 21), // 21 de maio
+        end: new Date(2023, 6, 20),   // 20 de junho
         description: "Gêmeos é um signo versátil e comunicativo. As pessoas de Gêmeos são conhecidas por sua curiosidade e adaptabilidade.",
         color: "amarelo"
     },
     {
         name: "Câncer",
-        start: new Date(2023, 5, 21), // 21 de junho
-        end: new Date(2023, 6, 22),   // 22 de julho
+        start: new Date(2023, 6, 21), // 21 de junho
+        end: new Date(2023, 7, 22),   // 22 de julho
         description: "Câncer é um signo emocional e sensível. As pessoas de Câncer são conhecidas por seu instinto protetor e compaixão.",
         color: "prateado"
     },
     {
         name: "Leão",
-        start: new Date(2023, 6, 23), // 23 de julho
-        end: new Date(2023, 7, 22),   // 22 de agosto
+        start: new Date(2023, 7, 23), // 23 de julho
+        end: new Date(2023, 8, 22),   // 22 de agosto
         description: "Leão é um signo dominante e carismático. As pessoas de Leão são conhecidas por sua autoconfiança e generosidade.",
         color: "dourado"
     },
     {
         name: "Virgem",
-        start: new Date(2023, 7, 23), // 23 de agosto
-        end: new Date(2023, 8, 22),   // 22 de setembro
+        start: new Date(2023, 8, 23), // 23 de agosto
+        end: new Date(2023, 9, 22),   // 22 de setembro
         description: "Virgem é um signo prático e analítico. As pessoas de Virgem são conhecidas por sua atenção aos detalhes e organização.",
         color: "marrom"
     },
     {
         name: "Libra",
-        start: new Date(2023, 8, 23), // 23 de setembro
-        end: new Date(2023, 9, 22),   // 22 de outubro
+        start: new Date(2023, 9, 23), // 23 de setembro
+        end: new Date(2023, 10, 22),   // 22 de outubro
         description: "Libra é um signo sociável e equilibrado. As pessoas de Libra são conhecidas por sua busca por justiça e harmonia.",
         color: "azul-claro"
     },
     {
         name: "Escorpião",
-        start: new Date(2023, 9, 23), // 23 de outubro
-        end: new Date(2023, 10, 21),  // 21 de novembro
+        start: new Date(2023, 10, 23), // 23 de outubro
+        end: new Date(2023, 11, 21),  // 21 de novembro
         description: "Escorpião é um signo intenso e determinado. As pessoas de Escorpião são conhecidas por sua paixão e força de vontade.",
         color: "vermelho-escuro"
     },
     {
         name: "Sagitário",
-        start: new Date(2023, 10, 22), // 22 de novembro
-        end: new Date(2023, 11, 21),   // 21 de dezembro
+        start: new Date(2023, 11, 22), // 22 de novembro
+        end: new Date(2023, 12, 21),   // 21 de dezembro
         description: "Sagitário é um signo aventureiro e otimista. As pessoas de Sagitário são conhecidas por sua busca por aventura e liberdade.",
         color: "roxo"
     },
     {
         name: "Capricórnio",
-        start: new Date(2023, 11, 22), // 22 de dezembro
-        end: new Date(2023, 0, 19),    // 19 de janeiro
+        start: new Date(2023, 12, 22), // 22 de dezembro
+        end: new Date(2023, 1, 19),    // 19 de janeiro
         description: "Capricórnio é um signo determinado e prático. As pessoas de Capricórnio são conhecidas por seu compromisso com metas e ambições.",
         color: "preto"
     },
     {
         name: "Aquário",
-        start: new Date(2023, 0, 20), // 20 de janeiro
-        end: new Date(2023, 1, 18),   // 18 de fevereiro
+        start: new Date(2023, 1, 20), // 20 de janeiro
+        end: new Date(2023, 2, 18),   // 18 de fevereiro
         description: "Aquário é um signo humanitário e original. As pessoas de Aquário são conhecidas por sua mente inovadora e ideais progressistas.",
         color: "azul"
     },
     {
         name: "Peixes",
-        start: new Date(2023, 1, 19), // 19 de fevereiro
-        end: new Date(2023, 2, 20),   // 20 de março
+        start: new Date(2023, 2, 19), // 19 de fevereiro
+        end: new Date(2023, 3, 20),   // 20 de março
         description: "Peixes é um signo intuitivo e compassivo. As pessoas de Peixes são conhecidas por sua empatia e criatividade.",
         color: "verde-mar"
     }

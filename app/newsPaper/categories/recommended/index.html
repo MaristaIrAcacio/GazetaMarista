@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>GazetaAcácio - Recomendados</title>
+
+    <!-- | Require_Meta_Tags | -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- | Import Bootstrap (CDN) | -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <!-- | Import Jquery (CDN) | -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- | Style_Sheets | -->
+    <link rel="stylesheet" href="../../../components/css/fonts.css">
+    <link rel="stylesheet" href="../../../components/css/app.css">
+    <link rel="stylesheet" href="./components/css/app.css">
+
+    <!-- | -- Import Sweetalert2 -- | -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- | -- Import / Exports files Javascript Modules -- | -->
+
+
+    <!-- | -- Import Javascripts -- | -->
+    <script src="./components/js/app.js" defer></script>
+
+</head>
+<body>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <!-- | Views | -->
+    <header>
+        <nav class="navbar colorBlueMarista navbar-dark bg-dark"> <!-- Caso prefira fixada add "fixed-top" nas classes--> 
+        <div class="container-fluid px-5">
+          <div class="navbar-brand logoMarista">
+              <img src="../../../components/images/gazeta-marista_radio-conexao_azul_fundo_120.png" class="imgLogoPage">
+          </div>
+          <div class="containerButtonsHeader">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="offcanvas offcanvas-end text-bg-dark colorBlueMarista" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h2 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Categorias</h2>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <hr>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a onclick="breve()" class="nav-link fs-5" href="">
+                    <i class="bi bi-megaphone-fill"></i>
+                    A voz da Escola
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a onclick="breve()" class="nav-link fs-5" href="#">
+                    <i class="bi bi-house-fill"></i>
+                    Acontece na Escola
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a onclick="breve()" class="nav-link fs-5" href="#">
+                    <i class="bi bi-buildings"></i>
+                    Londrina na Visão
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a onclick="breve()" class="nav-link fs-5" href="#">
+                    <i class="bi bi-newspaper"></i>
+                    Atualidades
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a onclick="breve()" class="nav-link fs-5" href="#">
+                    <i class="bi bi-person-hearts"></i>
+                    Fala Marista
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a onclick="breve()" class="nav-link fs-5" href="#">
+                    <i class="bi bi-journal-richtext"></i>
+                    Quadrinhos
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a  class="nav-link fs-5" href="../../../">
+                    <i class="bi bi-bookmark-check"></i>
+                    Página Inicial
+                </i></a>
+                </li>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+    <main class="containerMain">
+        <header class="headerContainermain">
+            <section class="infoWord-container">
+              <h1 class="timerDOM"><span class="hours"></span> <span class="timerType">AM</span></h1>
+              <div class="barDivision"></div>
+            </section>
+            <section class="btn-headerContainer">
+              <button class="btn btn-danger btnHeader" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <i class="bi bi-question-circle"></i>
+                Quem somos
+              </button>
+              <button id="btn-suport" class="btn btn-danger btnHeader" type="button"">
+                <i class="bi bi-headset"></i>
+                Suporte
+              </button>
+            </section>
+        </header>
+        <hr>
+        <main class="viewNews">
+            <header class="header-views">
+                <h1 class="title-viewNews">Recomendados <i class="bi bi-bookmark-check"></i></h1>
+                <br><hr>
+                <h5>Veja também:</h5>
+                <nav class="link-categories">
+                    <a href="#">
+                        <i class="bi bi-journal-richtext"></i>
+                        Quadrinhos
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-newspaper"></i>
+                        Atualidades
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-person-hearts"></i>
+                        Fala Marista
+                    </a>
+                </nav>    
+                <br>      
+            </header>
+            <hr>
+            <article class="cards">
+                <div class="new-card responsive1">
+                    <img src="../../images/news-1_1.jpg" class="image-new-card responsive1-image" alt="Imagem">
+                    <h1 class="title-news">Marido de Walewska relata à polícia problemas na relação e que pediu divórcio</h1>
+                    <br>
+                    <h3 class="slim-lide">Walewska será velada e sepultada em belo horizonte</h3>
+                    <hr>
+                    <a href="#">
+                        <button type="button responsive1-btn">Ver mais</button>
+                    </a>
+                </div>
+
+                <div class="new-card">
+                    <img src="../../images/news-2_1.jpg" class="image-new-card" alt="Imagem">
+                    <h1 class="title-news">Marido de Walewska relata à polícia problemas na relação e que pediu divórcio</h1>
+                    <br>
+                    <h3 class="slim-lide">Walewska será velada e sepultada em belo horizonte</h3>
+                    <hr>
+                    <a href="#">
+                        <button type="button">Ver mais</button>
+                    </a>
+                </div>
+
+                <div class="new-card">
+                    <img src="../../images/news-3_1.jpg" class="image-new-card" alt="Imagem">
+                    <h1 class="title-news">Marido de Walewska relata à polícia problemas na relação e que pediu divórcio</h1>
+                    <br>
+                    <h3 class="slim-lide">Walewska será velada e sepultada em belo horizonte</h3>
+                    <hr>
+                    <a href="#">
+                        <button type="button">Ver mais</button>
+                    </a>
+                </div>
+
+                <div class="new-card  merge-two-collumn">
+                    <img class="logo-marista-card-merge" src="../../../components/images/logo-unity.png" alt="Logo Marista">
+                    <br><br>
+                    <h1 class="description-merge">
+                        Venha conhcer mais sobre nossa escola
+                    </h1>
+                    <br>
+                    <button class="btn-more-merge" type="button"><a target="_blank" href="https://maristaescolassociais.org.br/escola/marista-escola-social-ir-acacio/">Veja mais <i class="bi bi-arrow-right-short"></i></a></button>
+                    <hr>
+                    <div class="social-media-links">
+                        <h3>Siga Nossa instituição</h3>
+                        <nav class="nav-link-social-media">
+                            <a href="https://www.instagram.com/maristairacacio/" target="_blank">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://maristaescolassociais.org.br/escola/marista-escola-social-ir-acacio/" target="_blank"><i class="bi bi-globe2"></i></a>
+                            <a href="https://www.facebook.com/maristairacacio/" target="_blank"><i class="bi bi-facebook"></i></a>
+                        </nav>
+                    </div>
+                    <hr>
+                    <img src="../../images/news-2_1.jpg" class="image-new-card-merge" alt="Imagem">
+                    <h1 class="title-news">Nesta ultima semana Marido de Walewska relata à polícia problemas na relação e que pediu divórcio</h1>
+                    <br>
+                    <h3 class="slim-lide">Walewska será velada e sepultada em belo horizonte em belo horizonte</h3>
+                    <br>
+                    <a href="#">
+                        <button type="button">Ver mais</button>
+                    </a>
+                </div>
+
+
+                <!-- --------------------------------------------------- --> 
+
+                <div class="new-card">
+                    <img src="../../images/news-5_1.jpg" class="image-new-card" alt="Imagem">
+                    <h1 class="title-news">Marido de Walewska relata à polícia problemas na relação e que pediu divórcio</h1>
+                    <br>
+                    <h3 class="slim-lide">Walewska será velada e sepultada em belo horizonte</h3>
+                    <hr>
+                    <a href="#">
+                        <button type="button">Ver mais</button>
+                    </a>
+                </div>
+
+                <div class="new-card">
+                    <img src="../../images/news-6_1.jpg" class="image-new-card" alt="Imagem">
+                    <h1 class="title-news">Marido de Walewska relata à polícia problemas na relação e que pediu divórcio</h1>
+                    <br>
+                    <h3 class="slim-lide">Walewska será velada e sepultada em belo horizonte</h3>
+                    <hr>
+                    <a href="#">
+                        <button type="button">Ver mais</button>
+                    </a>
+                </div>
+
+                <div class="new-card responsive2">
+                    <img src="../../images/news-7_1.jpg" class="image-new-card responsive1-image" alt="Imagem">
+                    <h1 class="title-news">Marido de Walewska relata à polícia problemas na relação e que pediu divórcio</h1>
+                    <br>
+                    <h3 class="slim-lide">Walewska será velada e sepultada em belo horizonte</h3>
+                    <hr>
+                    <a href="#">
+                        <button type="button">Ver mais</button>
+                    </a>
+                </div>
+                
+            </article>
+            <hr>
+        </main>
+    </main>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------- -->
+    
+    <footer class="containerFooter">
+        <div>
+            <img src="../../../components/images/marista-branco.png" height="64px" alt="Logo">
+        </div>
+        <div class="blockDisplay">
+            <nav>
+                <a href="https://www.instagram.com/maristairacacio"><i class="bi bi-instagram"></i></a>
+            </nav>
+            <hr>
+            <div class="contact-info">
+                <p>Entre em contato:</p>
+                <p>Email: <span class="info-contact">suport.jornalmarista@gmail.com</span></p>
+                <p>Telefone: <span class="info-contact">(43) 99609-0504</span></p>
+            </div>
+        </div>
+        <div>
+            <nav class="pages-site">
+                <a href="#">Página Inicial |</a>
+                <a onclick="clickSuport()" href="#">Contato</a>
+            </nav>
+            <br>
+            <button onclick="shareFacebook('maristairacacio.github.io/GazetaMarista/app/newsPaper/categories/recommended/')" class="btn-share" id="share-facebook"><i class="bi bi-facebook"></i> Compartilhar no Facebook</button>
+            <button onclick="shareTwitter('maristairacacio.github.io/GazetaMarista/app/newsPaper/categories/recommended/')" class="btn-share" id="share-twitter"><i class="bi bi-twitter"></i> Compartilhar no Twitter</button>
+            <button onclick="shareWhatsapp('maristairacacio.github.io/GazetaMarista/app/newsPaper/categories/recommended/')" class="btn-share" id="share-whatsapp"><i class="bi bi-whatsapp"></i> Compartilhar no WhatsApp</button>
+        </div>
+    </footer>
+
+</body>
+</html>
