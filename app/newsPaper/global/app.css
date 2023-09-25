@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    text-decoration: none;
+    color: #616161;
+    transition: .33s;
+    border-radius: 3px;
+}
+
+.btn-back:hover {
+    background: rgba(27, 26, 26, 0.123);
+}
+.btn-back > i {
+    font-size: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article {
+    margin-bottom: 20px;
+}
+
+.article h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.article p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #666;
+}
+
+.article p::first-letter {
+    font-weight: 600;
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #173963;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.date {
+    color: #222222 !important;
+    font-size: 1.3rem !important;
+}
+
+.lide {
+    font-family: serif !important;
+    font-size: 1.5rem !important;
+}
+
+.title {
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+    p {
+        font-size: 1.2rem !important;
+    }
+}
+
+.highlighted {
+    background-color: rgb(248, 248, 24);
+    cursor: pointer;
+}
+
+#popup {
+    z-index: 99;
+    position: absolute;
+    background: rgb(241, 241, 241);
+    border: 1px solid #00000027;
+    border-radius: 1px;
+    padding: .3rem 1rem;
+    display: none;
+}
+
+#popup > a {
+    font-family: sans-serif;
+}
+
+.wordPopUp {
+    color: rgb(99, 99, 99);
+}
