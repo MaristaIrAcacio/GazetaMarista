@@ -17,11 +17,11 @@ O periódico será alimentado quinzenalmente com novas matérias, escritas por n
 
 ## A Equipe
 
-<img width="49.78%" src="components\images\carla-ravaneda_editora-chefe.png" alt="Carla Ravaneda: editora chefe" /> <img width="49.78%" src="components\images\aline-querino_mentora.png" alt="Aline Querino: mentora (Projeto Educomunicação)" />
-<img width="49.78%" src="components\images\nathan-fabricio_ocupacoes.png" alt="Nathan Fabricio: programador, designer e redator" /> <img width="49.78%" src="components\images\vitor-gabriel_programador.png" alt="Vitor Gabriel: programador" />
-<img width="49.78%" src="components\images\julia-oliveira_redatora-supervisora.png" alt="Julia Oliveira: redatora e supervisora" /> <img width="49.78%" src="components\images\juan-luna-fernandes_redator-a.png" alt="Juan/Luna Fernandes: redator(a)" />
-<img width="49.78%" src="components\images\murilo-tonassi_redator.png" alt="Murilo Tonassi: redator" /> <img width="49.78%" src="components\images\nicolas-tonassi_redator.png" alt="Nicolas Tonassi: redator" />
-<img width="49.78%" src="components\images\sarah-ozeto_redatora.png" alt="Sarah Ozeto: redatora" /> <img width="49.78%" src="components\images\vitoria-gabrieli_redatora.png" alt="Vitória Gabrieli: redatora" />
+<img width="49.45%" src="components\images\carla-ravaneda_editora-chefe.png" alt="Carla Ravaneda: editora chefe" /> <img width="49.45%" src="components\images\aline-querino_mentora.png" alt="Aline Querino: mentora (Projeto Educomunicação)" />
+<img width="49.45%" src="components\images\nathan-fabricio_ocupacoes.png" alt="Nathan Fabricio: programador, designer e redator" /> <img width="49.45%" src="components\images\vitor-gabriel_programador.png" alt="Vitor Gabriel: programador" />
+<img width="49.45%" src="components\images\julia-oliveira_redatora-supervisora.png" alt="Julia Oliveira: redatora e supervisora" /> <img width="49.45%" src="components\images\juan-luna-fernandes_redator-a.png" alt="Juan/Luna Fernandes: redator(a)" />
+<img width="49.45%" src="components\images\murilo-tonassi_redator.png" alt="Murilo Tonassi: redator" /> <img width="49.45%" src="components\images\nicolas-tonassi_redator.png" alt="Nicolas Tonassi: redator" />
+<img width="49.45%" src="components\images\sarah-ozeto_redatora.png" alt="Sarah Ozeto: redatora" /> <img width="49.45%" src="components\images\vitoria-gabrieli_redatora.png" alt="Vitória Gabrieli: redatora" />
 
 ## Próximos Passos
 
