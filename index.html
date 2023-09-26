@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <title>Testando navegador...</title>
+
+    <!-- Teste se o javascript está ativado -->
+
+    <!-- | Require_Meta_Tags | -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- | Import Favicon | -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <style>
+
+        /* | Import Fonts | */
+        @import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@1,200&display=swap');
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #f5f5f5;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        * {
+            font-family: 'K2D', sans-serif;
+            user-select: none;
+        }
+
+        .container {
+            border: 5px solid #000;
+            padding: 2rem 3rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.281);
+        }
+
+        .titleAlert {
+            font-size: 3rem;
+        }
+
+        .descriptionAlert {
+            font-size: 2rem;
+        }
+    </style>
+
+
+</head>
+<body>
+    <noscript>
+        <div class="container">
+            <h1 class="titleAlert">O javascript está desativado!</h1>
+            <p class="descriptionAlert">Ative-o para navegar pelo nosso Jornal.</p>
+        </div>
+    </noscript>
+    <script type="text/javascript">
+        window.location.href = "./home/";
+    </script>
+</body>
+</html>

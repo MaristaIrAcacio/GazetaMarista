@@ -1,0 +1,50 @@
+
+/* -- | -- Colors Site - Root -- | --  */
+
+:root {
+    --blue: #3777BC;
+    --blue-dark: #173963;
+    --cyan: #5fc8d7;
+    --green: #36BBA5;
+    --red: #F15B4E;
+    --yellow: #FDB933;
+    --font-default: 'Poppins', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: var(--blue-dark); */
+}
+
+* {
+    font-family: var(--font-default), Arial, Helvetica, sans-serif !important;
+    /* color: #fefefe !important; */
+}
+
+/* -- | -- Header Features -- | --  */
+
+.header-page { /* Header Main */
+    background: var(--blue-dark) !important;
+    padding: .5rem 2rem;
+}
+
+.link-como-usar:hover {
+    color: #cecece !important;
+}
+
+.link-header-nav:hover {
+    color: #5e5e5e !important;
+}
+
+/* -- | -- Main News Features -- | --  */
+
+.timeRead {
+    font-size: 1rem;
+    color: #88888898;
+}
+
+.turma-author {
+    color: #88888898;
+}
