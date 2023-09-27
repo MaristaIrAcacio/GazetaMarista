@@ -18,50 +18,52 @@ document.getElementById("btn-suport").addEventListener("click", async() => {
         inputPlaceholder: 'Enter your email address'
       })
       
-      const { value: text } = await Swal.fire({
-        input: 'textarea',
-        inputLabel: 'Message',
-        inputPlaceholder: 'Type your message here...',
-        inputAttributes: {
-          'aria-label': 'Type your message here'
-        },
-        showCancelButton: true
-      })
-      
-      if (text&&email) {
-        const data = {
-            email: email,
-            mensagem: text
-        };
-    
-        fetch('https://formspree.io/f/mleynzjw', {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            Swal.fire(
-                'Sua mensagem foi enviada!',
-                'Aguarde enquanto processamos sua mensagem',
-                'success'
-            );
-        })
-        .catch(error => {
+      if (email) {
+        const { value: text } = await Swal.fire({
+            input: 'textarea',
+            inputLabel: 'Message',
+            inputPlaceholder: 'Type your message here...',
+            inputAttributes: {
+              'aria-label': 'Type your message here'
+            },
+            showCancelButton: true
+          })
+          
+          if (text&&email) {
+            const data = {
+                email: email,
+                mensagem: text
+            };
+        
+            fetch('https://formspree.io/f/xoqopaol', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                Swal.fire(
+                    'Sua mensagem foi enviada!',
+                    'Aguarde enquanto processamos sua mensagem',
+                    'success'
+                );
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Algo deu errado! | Tente novamente mais tarde',
+                });
+            });
+          } else {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Algo deu errado! | Tente novamente mais tarde',
+                text: 'Preencha todos os campos!',
             });
-        });
-      } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Preencha todos os campos!',
-        });
+          };
       };
 });
 
@@ -140,27 +142,25 @@ const inspiringPhrases = [
 ];
 
 
-const randomPhrase = inspiringPhrases[Math.floor(Math.random() * inspiringPhrases.length)];
+// const randomPhrase = inspiringPhrases[Math.floor(Math.random() * inspiringPhrases.length)];
 
-const QuoteOfTheDay = {
-    'quote' : randomPhrase.phrase,
-    'author' : randomPhrase.author,
-};
+// const QuoteOfTheDay = {
+//     'quote' : randomPhrase.phrase,
+//     'author' : randomPhrase.author,
+// };
 
-$('#generateQuote').html(`
-    <p class="cardDark-text">${QuoteOfTheDay.quote}</p>
-    <footer class="blockquote-footer cardDark-text">Dita por <cite title="Source Title" class="cardDark-text">${QuoteOfTheDay.author}</cite></footer>
-`);
+// $('#generateQuote').html(`
+//     <p class="cardDark-text">${QuoteOfTheDay.quote}</p>
+//     <footer class="blockquote-footer cardDark-text">Dita por <cite title="Source Title" class="cardDark-text">${QuoteOfTheDay.author}</cite></footer>
+// `);
 
 // -------------------------------------------- | Sistema de Clima | ---------------------------------------------
 
 
-document.getElementById('formWeather').addEventListener('submit', (e) => {
+document.querySelector('.weather-container-search').addEventListener('submit', (e) => {
     e.preventDefault();
-    if ($('#cityWeather')) {
-        searchResults($('#cityWeather').val());
-    } else {
-
+    if ($('#input-search-city-weather')) {
+        searchResults();
     };
 });
 
@@ -211,7 +211,7 @@ function ClimaByCoordinates(latitude, longitude) {
 }
 
 function searchResults() {
-    let city = $('#cityWeather').val();
+    let city = $('#input-search-city-weather').val();
     fetch(`${apiWather.base}weather?q=${city}&lang=${apiWather.lang}&units=${apiWather.units}&APPID=${apiWather.key}`)
         .then(response => {
             if (!response.ok) {
@@ -237,15 +237,47 @@ function searchResults() {
 }
 
 const displayResults = (weather) => {
-    document.querySelector('.container-res').classList.remove('hidden');
+
+    document.querySelector('.response-api-weather').classList.remove('hidden');
 
     let date = `${new Date().getHours()}:${new Date().getMinutes()}`;
 
-    $('').text(weather.name);
-    $('').text(date);
-    $('').text(`${weather.main.temp}°`);
-    $('').text(`${weather.weather[0].description}`);
-    $('').attr('src',`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`);
+    $('.response-weather-city').text(weather.name);
+    $('.response-weather-time').text(date);
+    $('.response-weather-temp').text(`${weather.main.temp}°`);
+    $('.response-weather-description').text(`${weather.weather[0].description}`);
+
+    const urlIcon = process_weather_icon(weather.weather[0].description);
+
+    $('.response-weather-icon').attr('src',`components/docs/image-system/${urlIcon}`);
+
+    document.getElementById('input-search-city-weather').value = "";
+
+};
+
+const process_weather_icon = (data) => {
+    switch (data) {
+        case 'céu limpo':
+            return 'sun-icon-weather.png'
+        case 'nuvens dispersas':
+            return 'poucas-nuvens-icon-weather.png'
+        case 'nublado':
+            return 'nublado-icon-weather.png'
+        case 'algumas nuvens':
+            return 'nuvens-quebradas-icon-weather.png'
+        case 'chuva de banho':
+            return 'chuva-icon-weather.png'
+        case 'chuva':
+            return 'chuva-icon-weather.png'
+        case 'trovoada':
+            return 'trovoada-icon-weather.png'
+        case 'neve':
+            return 'neve-icon-weather.png'
+        case 'névoa':
+            return 'nevoa-icon-weather.png'
+        default:
+            return 'error.png'
+    };
 };
 
 getGeolocation();
@@ -254,87 +286,99 @@ getGeolocation();
 const signs = [
     {
         name: "Áries",
-        start: new Date(2023, 2, 21), // 21 de março
-        end: new Date(2023, 3, 19),   // 19 de abril
+        start: new Date(2023, 2, 21),
+        end: new Date(2023, 3, 19),
         description: "Áries é o primeiro signo do zodíaco, representando o início de um novo ciclo. As pessoas de Áries são conhecidas por sua energia e determinação.",
-        color: "vermelho"
+        color: "vermelho",
+        url: "aries"
     },
     {
         name: "Touro",
-        start: new Date(2023, 3, 20), // 20 de abril
-        end: new Date(2023, 4, 20),   // 20 de maio
+        start: new Date(2023, 3, 20),
+        end: new Date(2023, 4, 20),
         description: "Touro é um signo prático e estável. As pessoas de Touro são conhecidas por sua lealdade e apreço pelo conforto.",
-        color: "verde"
+        color: "verde",
+        url: "touro"
     },
     {
         name: "Gêmeos",
-        start: new Date(2023, 4, 21), // 21 de maio
-        end: new Date(2023, 5, 20),   // 20 de junho
+        start: new Date(2023, 4, 21),
+        end: new Date(2023, 5, 20),
         description: "Gêmeos é um signo versátil e comunicativo. As pessoas de Gêmeos são conhecidas por sua curiosidade e adaptabilidade.",
-        color: "amarelo"
+        color: "amarelo",
+        url: "gemeos"
     },
     {
         name: "Câncer",
-        start: new Date(2023, 5, 21), // 21 de junho
-        end: new Date(2023, 6, 22),   // 22 de julho
+        start: new Date(2023, 5, 21),
+        end: new Date(2023, 6, 22),
         description: "Câncer é um signo emocional e sensível. As pessoas de Câncer são conhecidas por seu instinto protetor e compaixão.",
-        color: "prateado"
+        color: "prateado",
+        url: "cancer"
     },
     {
         name: "Leão",
-        start: new Date(2023, 6, 23), // 23 de julho
-        end: new Date(2023, 7, 22),   // 22 de agosto
+        start: new Date(2023, 6, 23),
+        end: new Date(2023, 7, 22),
         description: "Leão é um signo dominante e carismático. As pessoas de Leão são conhecidas por sua autoconfiança e generosidade.",
-        color: "dourado"
+        color: "dourado",
+        url: "leao"
     },
     {
         name: "Virgem",
-        start: new Date(2023, 7, 23), // 23 de agosto
-        end: new Date(2023, 8, 22),   // 22 de setembro
+        start: new Date(2023, 7, 23),
+        end: new Date(2023, 8, 22),
         description: "Virgem é um signo prático e analítico. As pessoas de Virgem são conhecidas por sua atenção aos detalhes e organização.",
-        color: "marrom"
+        color: "marrom",
+        url: "virgem"
     },
     {
         name: "Libra",
-        start: new Date(2023, 8, 23), // 23 de setembro
-        end: new Date(2023, 9, 22),   // 22 de outubro
+        start: new Date(2023, 8, 23),
+        end: new Date(2023, 9, 22),
         description: "Libra é um signo sociável e equilibrado. As pessoas de Libra são conhecidas por sua busca por justiça e harmonia.",
-        color: "azul-claro"
+        color: "azul-claro",
+        url: "libra"
     },
     {
         name: "Escorpião",
-        start: new Date(2023, 9, 23), // 23 de outubro
-        end: new Date(2023, 10, 21),  // 21 de novembro
+        start: new Date(2023, 9, 23),
+        end: new Date(2023, 10, 21),
         description: "Escorpião é um signo intenso e determinado. As pessoas de Escorpião são conhecidas por sua paixão e força de vontade.",
-        color: "vermelho-escuro"
+        color: "vermelho-escuro",
+        url: "escorpiao"
     },
     {
         name: "Sagitário",
-        start: new Date(2023, 10, 22), // 22 de novembro
-        end: new Date(2023, 11, 21),   // 21 de dezembro
+        start: new Date(2023, 10, 22),
+        end: new Date(2023, 11, 21),
         description: "Sagitário é um signo aventureiro e otimista. As pessoas de Sagitário são conhecidas por sua busca por aventura e liberdade.",
-        color: "roxo"
+        color: "roxo",
+        url: "sagitario"
     },
     {
         name: "Capricórnio",
-        start: new Date(2023, 11, 22), // 22 de dezembro
-        end: new Date(2023, 0, 19),    // 19 de janeiro
+        start: new Date(2023, 11, 22),
+        end: new Date(2023, 0, 19),
         description: "Capricórnio é um signo determinado e prático. As pessoas de Capricórnio são conhecidas por seu compromisso com metas e ambições.",
-        color: "preto"
+        color: "preto",
+        url: "capricornio"
     },
     {
         name: "Aquário",
-        start: new Date(2023, 0, 20), // 20 de janeiro
-        end: new Date(2023, 1, 18),   // 18 de fevereiro
+        start: new Date(2023, 0, 20),
+        end: new Date(2023, 1, 18),
         description: "Aquário é um signo humanitário e original. As pessoas de Aquário são conhecidas por sua mente inovadora e ideais progressistas.",
-        color: "azul"
+        color: "azul",
+        url: "aquario"
     },
     {
         name: "Peixes",
-        start: new Date(2023, 1, 19), // 19 de fevereiro
-        end: new Date(2023, 2, 20),   // 20 de março
+        start: new Date(2023, 1, 19),
+        end: new Date(2023, 2, 20),
         description: "Peixes é um signo intuitivo e compassivo. As pessoas de Peixes são conhecidas por sua empatia e criatividade.",
-        color: "verde-mar"
+        color: "verde-mar",
+        url: "peixes"
     }
 ];
 
@@ -351,5 +395,24 @@ const currentDate = new Date();
 const currentSign = getZodiacSign(currentDate);
 
 $('#signDay').text(currentSign.name);
-$('.description').text(currentSign.description);
+$('.sign-day-description').text(currentSign.description);
 $('#colorDay').text(currentSign.color);
+$('#image-sign-day').attr('src',`components/docs/image-system/${currentSign.url}.png`)
+
+
+
+document.getElementById('signs-select').addEventListener("change", () => {
+    
+    let signSelect = document.getElementById('signs-select').value;
+
+    for (const sign of signs) {
+        if (signSelect !== 'not') {
+            if (sign.name === signSelect) {
+                document.querySelector('.sign-description-response').innerHTML = `${sign.description} <br><br> Sua cor é ${sign.color}`;
+            };
+        } else {
+            document.querySelector('.sign-description-response').innerHTML = "Nenhum Signo Selecionado! <i class='bi bi-emoji-expressionless-fill'></i>";
+        };
+    };
+
+});
