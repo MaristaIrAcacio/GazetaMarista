@@ -48,3 +48,14 @@ body, html {
 .turma-author {
     color: #88888898;
 }
+
+/* -- | -- Footer Page Features -- | --  */
+
+.footer-page-main {
+    padding: 1rem 2rem;
+    background: var(--blue-dark);
+}
+
+.footer-page-main > * {
+    color: #fefefe !important;
+}
