@@ -49,6 +49,75 @@ body, html {
     color: #88888898;
 }
 
+.title-new-card-one {
+    font-size: 1.4rem;
+    font-weight: 500;    
+}
+
+/* -- | -- Weather - Layout -- | --  */
+
+.weather-container-search {
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(56, 54, 54, 0.425);
+    border-radius: 24px;
+    background: rgba(136, 136, 136, 0.212);
+    transition: .33s;
+}
+
+.weather-container-search:hover {
+    animation: skewX-animation-input-weather 2.5s ease-in-out;
+}
+
+@keyframes skewX-animation-input-weather {
+    0% {
+        transform: skewY(0);
+    }
+
+    20% {
+        transform: skewY(2deg);
+    }
+
+    40% {
+        transform: skewY(-2deg);
+    }
+
+    60% {
+        transform: skewY(2deg);
+    }
+
+    80% {
+        transform: skewY(-2deg);
+    }
+
+    100% {
+        transform: skewY(0);
+    }
+}
+
+.weather-container-search > input {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.weather-container-search > i {
+    cursor: pointer;
+    transition: .33s;
+}
+
+.weather-container-search > i:hover {
+    transform: scale(1.3);
+}
+
+.response-api-weather {
+    background: #888;
+    width: 100%;
+    height: 50%;
+}
+
 /* -- | -- Footer Page Features -- | --  */
 
 .footer-page-main {
@@ -58,4 +127,52 @@ body, html {
 
 .footer-page-main > * {
     color: #fefefe !important;
+}
+
+/* -- | -- Signos Style -- | --  */
+
+#signs-select {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: .3rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    outline: rgba(136, 136, 136, 0.39) 1px solid;
+    cursor: pointer;
+}
+
+#signs-select option {
+    font-size: 14px;
+    background-color: #fff;
+    padding: .3rem 1rem;
+    color: #333;
+    cursor: pointer;
+}
+  
+#signs-select option:checked {
+    background-color: #e6e6e6;
+    color: rgb(75, 75, 75);
+    font-size: 1.1rem;
+}
+  
+
+.sign-container {
+    display: flex;
+    gap: .5rem;
+}
+
+.container-response-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.sign-description-response {
+    font-size: 1rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
 }

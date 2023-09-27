@@ -187,7 +187,7 @@ article a .icon {
 }
 
 /* using the has() relational pseudo selector to update our custom properties */
-article:has(:hover, :focus) {
+.card-new-one:has(:hover, :focus) {
   --img-scale: 1.1;
   --title-color: #28666e;
   --link-icon-translate: 0;
@@ -211,9 +211,6 @@ Generic layout (demo looks)
 }
 
 @media screen and (max-width: 960px) {
-  article {
-    container: card/inline-size;
-  }
   .article-body p {
     display: none;
   }
