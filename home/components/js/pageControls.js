@@ -157,6 +157,12 @@ const inspiringPhrases = [
 // -------------------------------------------- | Sistema de Clima | ---------------------------------------------
 
 
+document.getElementById('searchweatherbtn').addEventListener('click', () => {
+    if ($('#input-search-city-weather')) {
+        searchResults();
+    };
+});
+
 document.querySelector('.weather-container-search').addEventListener('submit', (e) => {
     e.preventDefault();
     if ($('#input-search-city-weather')) {
@@ -400,9 +406,12 @@ $('#colorDay').text(currentSign.color);
 $('#image-sign-day').attr('src',`components/docs/image-system/${currentSign.url}.png`)
 
 
+document.getElementById('search-sign-description').addEventListener('click', () => loadSign());
 
-document.getElementById('signs-select').addEventListener("change", () => {
-    
+
+document.getElementById('signs-select').addEventListener("change", () => loadSign());
+
+const loadSign = () => {
     let signSelect = document.getElementById('signs-select').value;
 
     for (const sign of signs) {
@@ -414,5 +423,4 @@ document.getElementById('signs-select').addEventListener("change", () => {
             document.querySelector('.sign-description-response').innerHTML = "Nenhum Signo Selecionado! <i class='bi bi-emoji-expressionless-fill'></i>";
         };
     };
-
-});
+};

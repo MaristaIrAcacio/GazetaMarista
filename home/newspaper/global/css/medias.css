@@ -1,0 +1,29 @@
+@media screen and (max-width: 900px) {
+    .content-page {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .bodyNew {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .content-page {
+        padding: 0 .4rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .bodyNew {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .bodyNew {
+        font-size: .7rem;
+    }
+}
