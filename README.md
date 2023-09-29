@@ -1,5 +1,5 @@
 <a href="https://maristairacacio.github.io/GazetaMarista/">
-  <img src="docs\gazeta-marista_radio-conexao.png" align="center" />
+  <img src="docs/gazeta-marista_radio-conexao.png" align="center" />
 </a>
 <h1 align="center">Gazeta Marista Irmão Acácio</h1>
 <p align="center">Um projeto desenvolvido pela disciplina de Língua Portuguesa sob orientação da professora Carla Ravaneda, em parceria com o projeto Educomunicação orientado por Aline Querino.</p>
@@ -17,11 +17,12 @@ O periódico será alimentado quinzenalmente com novas matérias, escritas por n
 
 ## A Equipe
 
-<img width="49.45%" src="app\components\images\carla-ravaneda_editora-chefe.png" alt="Carla Ravaneda: editora chefe" /> <img width="49.45%" src="app\components\images\aline-querino_mentora.png" alt="Aline Querino: mentora (Projeto Educomunicação)" />
-<img width="49.45%" src="app\components\images\nathan-fabricio_ocupacoes.png" alt="Nathan Fabricio: programador, designer e redator" /> <img width="49.45%" src="app\components\images\vitor-gabriel_programador.png" alt="Vitor Gabriel: programador" />
-<img width="49.45%" src="app\components\images\julia-oliveira_redatora-supervisora.png" alt="Julia Oliveira: redatora e supervisora" /> <img width="49.45%" src="app\components\images\juan-luna-fernandes_redator-a.png" alt="Juan/Luna Fernandes: redator(a)" />
-<img width="49.45%" src="app\components\images\murilo-tonassi_redator.png" alt="Murilo Tonassi: redator" /> <img width="49.45%" src="app\components\images\nicolas-tonassi_redator.png" alt="Nicolas Tonassi: redator" />
-<img width="49.45%" src="app\components\images\sarah-ozeto_redatora.png" alt="Sarah Ozeto: redatora" /> <img width="49.45%" src="app\components\images\vitoria-gabrieli_redatora.png" alt="Vitória Gabrieli: redatora" />
+<img width="49.45%" src="docs/pessoas/carla-ravaneda_editora-chefe.png" alt="Carla Ravaneda: editora chefe" /> <img width="49.45%" src="docs/pessoas/aline-querino_mentora.png" alt="Aline Querino: mentora (Projeto Educomunicação)" />
+<img width="33.33%" src="docs/pessoas/nathan-fabricio_ocupacoes.png" alt="Nathan Fabricio: programador, designer e redator" /> <img width="33.33%" src="docs/pessoas/vitor-gabriel_programador.png" alt="Vitor Gabriel: programador" /> <img width="33.33%" src="docs/pessoas/julia-oliveira_redatora-supervisora.png" alt="Julia Oliveira: redatora e supervisora" />
+<img width="49.45%" src="docs/pessoas/juan-luna-fernandes_redator-a.png" alt="Juan/Luna Fernandes: redator(a)" />
+<img width="49.45%" src="docs/pessoas/murilo-tonassi_redator.png" alt="Murilo Tonassi: redator" />
+<img width="49.45%" src="docs/pessoas/nicolas-tonassi_redator.png" alt="Nicolas Tonassi: redator" />
+<img width="49.45%" src="docs/pessoas/sarah-ozeto_redatora.png" alt="Sarah Ozeto: redatora" /> <img width="49.45%" src="docs/pessoas/vitoria-gabrieli_redatora.png" alt="Vitória Gabrieli: redatora" />
 
 ## Próximos Passos
 
@@ -32,9 +33,9 @@ O periódico será alimentado quinzenalmente com novas matérias, escritas por n
 
 <p align="center">
   <a href="https://maristaescolassociais.org.br/escola/marista-escola-social-ir-acacio/">
-    <img width="64%" src="docs\marista_azul-fundo.png" />
+    <img width="64%" src="docs/marista_azul-fundo.png" />
   </a>
 </p>
 <p align="center">
-  <a href="https://www.instagram.com/maristairacacio/"><img height="64px" src="docs\instagram.png" /></a><a href="https://www.facebook.com/maristairacacio"><img height="64px" src="docs\facebook.png" /></a><a href="https://www.linkedin.com/company/marista-ir-acácio/"><img height="64px" src="docs\linkedin.png" /></a>
+  <a href="https://www.instagram.com/maristairacacio/"><img height="64px" src="docs/redes/instagram.png" /></a><a href="https://www.facebook.com/maristairacacio"><img height="64px" src="docs/redes/facebook.png" /></a><a href="https://www.linkedin.com/company/marista-ir-acácio/"><img height="64px" src="docs/redes/linkedin.png" /></a>
 </p>
