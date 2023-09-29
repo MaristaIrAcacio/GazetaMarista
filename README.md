@@ -18,7 +18,9 @@ O periódico será alimentado quinzenalmente com novas matérias, escritas por n
 ## A Equipe
 
 <img width="49.45%" src="docs/pessoas/carla-ravaneda_editora-chefe.png" alt="Carla Ravaneda: editora chefe" /> <img width="49.45%" src="docs/pessoas/aline-querino_mentora.png" alt="Aline Querino: mentora (Projeto Educomunicação)" />
-<img width="33.33%" src="docs/pessoas/nathan-fabricio_ocupacoes.png" alt="Nathan Fabricio: programador, designer e redator" /> <img width="33.33%" src="docs/pessoas/vitor-gabriel_programador.png" alt="Vitor Gabriel: programador" /> <img width="33.33%" src="docs/pessoas/julia-oliveira_redatora-supervisora.png" alt="Julia Oliveira: redatora e supervisora" />
+<img width="32.80%" src="docs/pessoas/nathan-fabricio_ocupacoes.png" alt="Nathan Fabricio: programador, designer e redator" />
+<img width="32.80%" src="docs/pessoas/vitor-gabriel_programador.png" alt="Vitor Gabriel: programador" />
+<img width="32.80%" src="docs/pessoas/julia-oliveira_redatora-supervisora.png" alt="Julia Oliveira: redatora e supervisora" />
 <img width="49.45%" src="docs/pessoas/juan-luna-fernandes_redator-a.png" alt="Juan/Luna Fernandes: redator(a)" />
 <img width="49.45%" src="docs/pessoas/murilo-tonassi_redator.png" alt="Murilo Tonassi: redator" />
 <img width="49.45%" src="docs/pessoas/nicolas-tonassi_redator.png" alt="Nicolas Tonassi: redator" />
