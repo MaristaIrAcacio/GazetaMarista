@@ -67,3 +67,13 @@
     font-family: var(--font-default) !important;
     font-weight: 800;
 }
+
+.badge {
+    font-size: 2rem;
+    transition: .33s;
+    cursor: pointer;
+}
+
+.badge:hover {
+    padding: .7rem 2rem;
+}
