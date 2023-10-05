@@ -234,3 +234,12 @@ body, html {
     color: #444444;
     text-align: center;
 }
+
+.card-new-one-marista {
+    text-align: center;
+    border: 1px solid  #0000003b;
+}
+
+.title-container-card-marista {
+    font-size: 1.4rem;
+}
