@@ -29,7 +29,7 @@ O periódico será alimentado quinzenalmente com novas matérias, escritas por n
 <img width="32.80%" src="docs/pessoas/felipe-silva_redator.png" alt="Felipe da Silva: redator" />
 <img width="32.80%" src="docs/pessoas/isabelle-oliveira_redatora.png" alt="Isabelle Oliveira: redatora" />
 <img width="32.80%" src="docs/pessoas/joao-victor_redator.png" alt="João Victor: redator" />
-<img width="32.80%" src="docs/pessoas/juan-luna-fernandes_redator-a.png" alt="Juan/Luna Fernandes: redator(a)" />
+<img width="32.80%" src="docs/pessoas/juan-fernandes_redator.png" alt="Juan Fernandes: redator" />
 <img width="32.80%" src="docs/pessoas/maria-mendes_redatora.png" alt="Maria Mendes: redatora" />
 <img width="32.80%" src="docs/pessoas/milena-caroline_redatora.png" alt="Milena Caroline: redatora" />
 <img width="32.80%" src="docs/pessoas/murilo-tonassi_redator.png" alt="Murilo Tonassi: redator" />
