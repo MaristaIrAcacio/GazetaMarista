@@ -1,9 +1,3 @@
-@media screen and (max-width: 900px) {
-    .content-page {
-        width: 100%;
-    }
-}
-
 @media screen and (max-width: 600px) {
     .bodyNew {
         font-size: 1.1rem;
