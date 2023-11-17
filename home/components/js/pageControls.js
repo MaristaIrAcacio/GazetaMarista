@@ -15,7 +15,7 @@ document.getElementById("btn-suport").addEventListener("click", async() => {
         title: 'Insira seu Email',
         input: 'email',
         inputLabel: 'Seu endereço de Email',
-        inputPlaceholder: 'Enter your email address'
+        inputPlaceholder: 'Insira seu endereço de Email'
       })
       
       if (email) {

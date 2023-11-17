@@ -17,11 +17,7 @@
 
 .content-page {
     width: 80%;
-    border: 1px solid #807f7f41;
-    border-top: none;
-    border-bottom: none;
     padding: 0 3rem;
-    background: rgba(228, 227, 227, 0.199);
 }
 
 .btn-back {
