@@ -4,12 +4,6 @@
     }
 }
 
-@media screen and (max-width: 450px) {
-    .content-page {
-        padding: 0 .4rem;
-    }
-}
-
 @media screen and (max-width: 350px) {
     .bodyNew {
         font-size: 1rem;
