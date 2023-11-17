@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.cdnfonts.com/css/torus');
 
 :root {
     --blue: #3777BC;
@@ -7,7 +7,7 @@
     --green: #36BBA5;
     --red: #F15B4E;
     --yellow: #FDB933;
-    --font-default: 'Poppins', sans-serif;
+    --font-default: 'Torus', sans-serif;
 }
 
 .mainPage {
