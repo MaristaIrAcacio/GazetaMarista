@@ -245,3 +245,7 @@ body, html {
 .title-container-card-marista {
     font-size: 1.4rem;
 }
+
+.container-video-file {
+    height: 100%;
+}
