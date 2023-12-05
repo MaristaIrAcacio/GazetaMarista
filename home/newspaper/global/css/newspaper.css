@@ -44,10 +44,6 @@
     text-indent: 30px;
 }
 
-.bodyNew::first-letter {
-    font-weight: 900;
-}
-
 .date {
     color: #4d4c4c;
     font-size: 1.3rem;
