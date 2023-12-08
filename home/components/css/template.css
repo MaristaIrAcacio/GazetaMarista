@@ -308,7 +308,3 @@ Generic layout (demo looks)
   border-radius: 12px;
   transition: .33s;
 }
-
-.icon-news-text:hover {
-  transform:scale(.9) ;
-}

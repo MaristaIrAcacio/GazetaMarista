@@ -67,36 +67,6 @@ body, html {
     transition: .33s;
 }
 
-.weather-container-search:hover {
-    animation: skewX-animation-input-weather 2.5s ease-in-out;
-}
-
-@keyframes skewX-animation-input-weather {
-    0% {
-        transform: skewY(0);
-    }
-
-    20% {
-        transform: skewY(1deg);
-    }
-
-    40% {
-        transform: skewY(-1deg);
-    }
-
-    60% {
-        transform: skewY(1deg);
-    }
-
-    80% {
-        transform: skewY(-1deg);
-    }
-
-    100% {
-        transform: skewY(0);
-    }
-}
-
 .weather-container-search > input {
     border: none;
     background: transparent;
@@ -106,10 +76,6 @@ body, html {
 .weather-container-search > i {
     cursor: pointer;
     transition: .33s;
-}
-
-.weather-container-search > i:hover {
-    transform: scale(1.3);
 }
 
 .response-api-weather {
