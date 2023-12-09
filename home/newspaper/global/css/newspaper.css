@@ -60,7 +60,3 @@
     transition: .33s;
     cursor: pointer;
 }
-
-.badge:hover {
-    padding: .7rem 2rem;
-}
