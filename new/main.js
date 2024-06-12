@@ -1,4 +1,4 @@
-function f1() {
+function bold() {
     const selection = window.getSelection();
     console.log(selection);
     console.log(selection.rangeCount);
@@ -8,7 +8,9 @@ function f1() {
         console.log(range);
         if (range.startContainer != range.endContainer) {
             console.log("ta em linha diferente");
+
             console.log(range.startContainer);
+            console.log(selection.getRangeAt(8).cloneRange());
             console.log(range.endContainer);
         } else {
             console.log("ta em linha igual");
@@ -48,12 +50,4 @@ function f7() {
 
 function f8() {
     document.getElementById("textarea1").style.textTransform = "capitalize";
-}
-
-function f9() {
-    document.getElementById("textarea1").style.fontWeight = "normal";
-    document.getElementById("textarea1").style.textAlign = "left";
-    document.getElementById("textarea1").style.fontStyle = "normal";
-    document.getElementById("textarea1").style.textTransform = "capitalize";
-    document.getElementById("textarea1").value = " ";
 }
